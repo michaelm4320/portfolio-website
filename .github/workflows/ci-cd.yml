@@ -24,7 +24,6 @@ jobs:
 
       - name: Build and test backend
         run: |
-          cd portfolio-website
           chmod +x portfolio-backend/mvnw
           ./portfolio-backend/mvnw clean install
 
