@@ -17,8 +17,8 @@ jobs:
           distribution: 'adopt'
 
       - name: Build and test backend
-        working-directory: portfolio-backend
         run: |
+          cd portfolio-backend
           mvn clean install
 
   frontend-build:
