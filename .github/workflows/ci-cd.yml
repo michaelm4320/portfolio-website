@@ -17,6 +17,7 @@ jobs:
           distribution: 'adopt'
 
       - name: Build and test backend
+        working-directory: portfolio-website/portfolio-backend
         run: |
           chmod +x mvnw
           ./mvnw clean install
