@@ -30,7 +30,6 @@ jobs:
       - name: Build and test backend
         run: |
           mvn clean install
-          # Optionally, run tests here if applicable
 
   frontend-build:
     runs-on: ubuntu-latest
