@@ -1,6 +1,12 @@
 name: CI Pipeline
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   backend-build:
@@ -17,9 +23,10 @@ jobs:
           distribution: 'adopt'
 
       - name: Build and test backend
+        working-directory: portfolio-backend
         run: |
-          cd portfolio-backend
-          mvn clean install
+          chmod +x mvnw
+          ./mvnw clean install
 
   frontend-build:
     runs-on: ubuntu-latest
