@@ -19,6 +19,7 @@ jobs:
       - name: Build and test backend
         working-directory: portfolio-backend
         run: |
+          chmod +x mvnw
           ./mvnw clean install
 
   frontend-build:
@@ -34,7 +35,7 @@ jobs:
           node-version: '16'
 
       - name: Install dependencies and build frontend
+        working-directory: portfolio-website-react-app
         run: |
-          cd portfolio-website-react-app
           npm install
           npm run build
