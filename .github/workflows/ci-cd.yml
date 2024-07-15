@@ -23,10 +23,10 @@ jobs:
           distribution: 'adopt'
 
       - name: Build and test backend
-        working-directory: portfolio-backend
         run: |
-          chmod +x mvnw
-          ./mvnw clean install
+          cd portfolio-website
+          chmod +x portfolio-backend/mvnw
+          ./portfolio-backend/mvnw clean install
 
   frontend-build:
     runs-on: ubuntu-latest
