@@ -8,9 +8,9 @@ export default function Home() {
         <div className="home--section--content">
           <p className="section--title">Hey, I'm John</p>
           <h1 className="home--section--title">
-            <span className="home--section-title--color">Software</span>{" "}
+            <span className="home--section-title--color">Full Stack</span>{" "}
             <br />
-            Engineer
+            Developer
           </h1>
           <p className="home--section-description">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
