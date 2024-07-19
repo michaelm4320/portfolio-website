@@ -1,7 +1,10 @@
-# portfolio-website
-My portfolio website showcasing software and web applications I created.
+## Portfolio Website
 
-The website consists of different sections:
+### Overview
+
+A personal portfolio website showcasing different sections about myself, my technical skills, projects, and a contact form. Built using modern web technologies to create a professional and responsive single-page application.
+
+### Sections
 
 * Home
 * About Me
@@ -9,14 +12,17 @@ The website consists of different sections:
 * Portfolio
 * Contact Me
 
-Tech Stack:
+### Tech Stack
 
-* Frontend: HTML / CSS / JavaScript / React + Vite
-* Backend: Spring Boot / MySQL
+* **Frontend**: HTML / CSS / JavaScript / React + Vite
+* **Backend**: Spring Boot / MySQL
 
-CI/CD:
 
-* itHub Actions for continuous integration and deployment.
+### Features
+
+* **CI/CD**
+
+* GitHub Actions for continuous integration and deployment.
 * Set up workflows to build and test both frontend and backend.
 
 # Tutorials
