@@ -22,8 +22,8 @@ A personal portfolio website showcasing different sections about myself, my tech
 
 * **CI/CD**
 
-* GitHub Actions for continuous integration and deployment.
-* Set up workflows to build and test both frontend and backend.
+  - GitHub Actions for continuous integration and deployment.
+  - Set up workflows to build and test both frontend and backend.
 
 # Tutorials
 https://www.youtube.com/watch?v=_vOInY6SRVE
