@@ -25,5 +25,9 @@ A personal portfolio website showcasing different sections about myself, my tech
   - GitHub Actions for continuous integration and deployment.
   - Set up workflows to build and test both frontend and backend.
 
+* **User Experience**:
+  - Responsive design for desktop and mobile.
+  - Intuitive and user-friendly navigation.
+  
 # Tutorials
 https://www.youtube.com/watch?v=_vOInY6SRVE
