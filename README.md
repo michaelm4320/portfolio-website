@@ -28,6 +28,11 @@ A personal portfolio website showcasing different sections about myself, my tech
 * **User Experience**:
   - Responsive design for desktop and mobile.
   - Intuitive and user-friendly navigation.
-  
+
+### Future Enhancements
+
+- **Advanced Testing**: Implementation of more comprehensive unit and integration tests.
+
 # Tutorials
+
 https://www.youtube.com/watch?v=_vOInY6SRVE
