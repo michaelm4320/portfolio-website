@@ -32,6 +32,7 @@ A personal portfolio website showcasing different sections about myself, my tech
 ### Future Enhancements
 
 - **Advanced Testing**: Implementation of more comprehensive unit and integration tests.
+- **Animeations**: Enhancing the design with more custom animations and effects.
 
 # Tutorials
 
