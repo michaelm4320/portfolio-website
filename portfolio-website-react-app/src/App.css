@@ -127,8 +127,10 @@ p {
     padding-bottom: 70px;
   }
 
+
   .home-section-greeting,
   .home-section-title,
   .home-section-description {
     text-align: center;
   }
+}
