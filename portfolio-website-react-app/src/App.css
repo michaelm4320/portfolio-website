@@ -116,3 +116,19 @@ p {
   background-color: var(--white);
   color: var(--primary);
 }
+
+@media only screen and (max-width: 1200px) {
+  .btn-outline-primary {
+    display: none;
+  }
+  .home-section {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 70px;
+  }
+
+  .home-section-greeting,
+  .home-section-title,
+  .home-section-description {
+    text-align: center;
+  }
