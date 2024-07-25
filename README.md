@@ -34,41 +34,57 @@ A personal portfolio website showcasing different sections about myself, my tech
 - **Advanced Testing**: Implementation of more comprehensive unit and integration tests.
 - **Animations**: Enhancing the design with more custom animations and effects.
 
-## Testing Strategy
+## `package.json` Overview
 
-### Front-End Testing
+The `package.json` file is a crucial part of any Node.js project. It contains metadata about the project, including its dependencies, scripts, and configuration. In this project, `package.json` has been configured to handle various tasks related to development and testing.
 
-- **Unit Testing**:
-  - **Library**: [Jest](https://jestjs.io/)
-  - **Usage**: Used for writing unit tests for individual components and functions.
-  - **Example**: Testing if a React component renders correctly or if a function returns expected results.
+### Scripts
 
-- **Integration Testing**:
-  - **Library**: [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
-  - **Usage**: Used for testing how various components interact with each other.
-  - **Example**: Testing if a user can interact with a form component and see expected results.
+The `scripts` section in `package.json` allows you to define commands that can be run from the terminal. Here's an overview of the scripts set up for this project:
 
-- **End-to-End Testing**:
-  - **Library**: [Playwright](https://playwright.dev/)
-  - **Usage**: Used for testing the application as a whole, simulating user interactions and verifying the application’s behavior.
-  - **Example**: Testing if a user can navigate through the site, fill out forms, and see expected results.
+- **`dev`**: Runs the Vite development server. Use `npm run dev` to start the development server and view the application locally.
+- **`build`**: Builds the project for production. Use `npm run build` to generate optimized assets for deployment.
+- **`lint`**: Lints the codebase using ESLint. Use `npm run lint` to check for code quality and potential issues.
+- **`preview`**: Previews the production build locally. Use `npm run preview` to see how the production build will look.
+- **`test`**: Runs Playwright end-to-end tests. Use `npm run test` to execute tests that check the full flow of the application.
+- **`test:e2e`**: Alias for running Playwright end-to-end tests. Use `npm run test:e2e` for the same purpose as `npm run test`.
+- **`test:unit`**: Runs unit tests using Vitest. Use `npm run test:unit` to execute unit tests on the project's components and logic.
 
-### Back-End Testing
+## Testing Setup
 
-- **Unit Testing**:
-  - **Library**: [JUnit](https://junit.org/junit5/)
-  - **Usage**: Used for writing unit tests for individual service methods and components in the Spring Boot application.
-  - **Example**: Testing if a service method processes data correctly.
+### Playwright
 
-- **Integration Testing**:
-  - **Library**: [Spring Boot Test](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-testing)
-  - **Usage**: Used for testing interactions between various components of the Spring Boot application, such as repository interactions.
-  - **Example**: Testing if a REST controller correctly interacts with the service layer and returns expected results.
+**Playwright** is used for end-to-end (e2e) testing. It ensures that the entire application works correctly from the user's perspective by simulating interactions with the application.
 
-- **Mocking**:
-  - **Library**: [Mockito](https://site.mockito.org/)
-  - **Usage**: Used for creating mock objects and stubbing methods to test isolated components.
-  - **Example**: Mocking a repository to test a service method independently from the database.
+- **Configuration**:
+  - Configuration for Playwright is defined in `playwright.config.cjs`.
+  - The `baseURL` is set to `http://localhost:5173/`, which is the local development server URL.
+  - Tests are located in the `playwright-tests` directory.
+
+- **Running Tests**:
+  - Use `npm run test` or `npm run test:e2e` to run Playwright end-to-end tests.
+
+### Vitest
+
+**Vitest** is used for unit testing. It tests individual components and functions in isolation to ensure they work correctly.
+
+- **Configuration**:
+  - Configuration for Vitest is defined in `vitest.config.js`.
+  - The `include` option specifies that tests are located in the `unit-tests` directory.
+
+- **Running Tests**:
+  - Use `npm run test:unit` to run unit tests with Vitest.
+
+## Directory Structure for Tests
+
+- **Playwright Tests**: Located in the `playwright-tests` directory.
+- **Vitest Unit Tests**: Located in the `unit-tests` directory.
+
+## Summary
+
+This setup ensures that the application is thoroughly tested with both end-to-end and unit tests. Playwright handles the e2e testing, simulating user interactions, while Vitest focuses on unit tests for individual components and logic.
+
+
 
 # Tutorials
 
