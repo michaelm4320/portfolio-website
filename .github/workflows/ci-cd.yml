@@ -51,6 +51,15 @@ jobs:
         working-directory: portfolio-website-react-app
         run: npm run build
 
+      - name: Start frontend server
+        working-directory: portfolio-website-react-app
+        run: npm run dev &
+        env:
+          NODE_ENV: test
+
+      - name: Wait for frontend server to be ready
+        run: npx wait-on http://localhost:5173
+
       - name: Run Vitest unit tests
         working-directory: portfolio-website-react-app
         run: npm run test:unit
