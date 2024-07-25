@@ -20,10 +20,34 @@ A personal portfolio website showcasing different sections about myself, my tech
 
 ### Features
 
-* **CI/CD**
+### CI/CD
 
-  - GitHub Actions for continuous integration and deployment.
-  - Set up workflows to build and test both frontend and backend.
+This project uses GitHub Actions to automate the build and test processes for both the frontend and backend.
+
+#### Workflow Configuration
+
+- **Trigger**: The workflow is triggered on pushes and pull requests to the `main` branch.
+
+#### Jobs
+
+1. **Backend Build and Test**
+    - **Environment**: `ubuntu-latest`
+    - **Steps**:
+        - **Checkout Code**: Uses the `actions/checkout@v2` action to checkout the code.
+        - **Set up JDK 21**: Uses the `actions/setup-java@v4` action to set up Java Development Kit version 21.
+        - **Set up Maven**: Uses the `stCarolas/setup-maven@v5` action to set up Maven version 3.8.2.
+        - **Build and Test Backend**: Runs the `mvn clean install` command to build and test the backend.
+
+2. **Frontend Build and Test**
+    - **Environment**: `ubuntu-latest`
+    - **Steps**:
+        - **Checkout Code**: Uses the `actions/checkout@v2` action to checkout the code.
+        - **Set up Node.js**: Uses the `actions/setup-node@v2` action to set up Node.js version 16.
+        - **Install Dependencies and Build Frontend**: Runs the `npm install` and `npm run build` commands in the `portfolio-website-react-app` directory.
+        - **Run Unit Tests with Vitest**: Runs the `npm run test:unit` command to execute unit tests using Vitest.
+        - **Start Development Server**: Starts the Vite development server and runs it in the background.
+        - **Run End-to-End Tests with Playwright**: Runs the `npm run test:e2e` command to execute end-to-end tests using Playwright.
+
 
 * **User Experience**:
   - Responsive design for desktop and mobile.
