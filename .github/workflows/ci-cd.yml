@@ -43,8 +43,18 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Install dependencies and build frontend
+      - name: Install dependencies
         working-directory: portfolio-website-react-app
-        run: |
-          npm install
-          npm run build
+        run: npm install
+
+      - name: Run Vitest unit tests
+        working-directory: portfolio-website-react-app
+        run: npm run test:unit
+
+      - name: Run Playwright end-to-end tests
+        working-directory: portfolio-website-react-app
+        run: npx playwright install --with-deps && npm run test:e2e
+
+      - name: Build frontend
+        working-directory: portfolio-website-react-app
+        run: npm run build
