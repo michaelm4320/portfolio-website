@@ -10,6 +10,7 @@ A personal portfolio website showcasing different sections about myself, my tech
 * About Me
 * Tech Stack / Experience
 * Portfolio
+* Testimonials
 * Contact Me
 
 ### Tech Stack
