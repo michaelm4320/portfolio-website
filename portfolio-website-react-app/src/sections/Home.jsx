@@ -1,5 +1,5 @@
 import React from 'react';
-import testImg from '../assets/testImg.png';
+import testImg from '../assets/testImg4.png';
 
 export default function Home() {
   return (

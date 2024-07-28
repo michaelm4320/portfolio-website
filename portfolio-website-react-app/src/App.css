@@ -35,6 +35,7 @@ p {
   justify-content: space-between;
   gap: 32px;
   background-color: var(--bg-shade);
+
 }
 
 .home-section-content {
@@ -90,7 +91,7 @@ p {
 }
 
 .home-section-img > img {
-  width: 100%;
+  width: 90%;
   height: 100%;
 }
 
@@ -132,5 +133,10 @@ p {
   .home-section-title,
   .home-section-description {
     text-align: center;
+  }
+
+  .home-section-img > img {
+    width: 100%;
+    height: 100%;
   }
 }
