@@ -27,6 +27,12 @@ p {
   --white: #ffffff;
 }
 
+.nav-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .home-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
