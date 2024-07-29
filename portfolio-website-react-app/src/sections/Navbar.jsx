@@ -1,7 +1,38 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
+import { Link } from "react-scroll";
 import logo from '../assets/logo.png';
 
-export default function Navbar() {
+function Navbar() {
+  const [navActive, setNavActive] = useState(false);
+
+  const toggleNav = () => {
+    setNavActive(!navActive);
+  };
+
+  const closeMenu = () => {
+    setNavActive(false);
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 500) {
+        closeMenu;
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (window.innerWidth <= 1200) {
+      closeMenu;
+    }
+  }, []);
+
   return (
     <nav id="homeSection" className="nav-section">
         <div className="nav-section-icon">
