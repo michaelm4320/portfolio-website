@@ -34,11 +34,19 @@ function Navbar() {
   }, []);
 
   return (
-    <nav id="homeSection" className="nav-section">
+    <nav className={'nav-section ${navActive ? "active" : ""}'}>
         <div className="nav-section-icon">
             <img src={logo} alt="logo Section" />
         </div>
-        <div className="nav-section-content">
+        <a
+            className={`nav__hamburger ${navActive ? "active" : ""}`}
+            onClick={toggleNav}
+        >
+            <span className="nav__hamburger__line"></span>
+            <span className="nav__hamburger__line"></span>
+            <span className="nav__hamburger__line"></span>
+        </a>
+        <div className={`nav-section-content ${navActive ? "active" : ""}`}>
             <ul>
                 <li>Home</li>
                 <li>About Me</li>
@@ -53,3 +61,5 @@ function Navbar() {
     </nav>
   );
 }
+
+export default Navbar;
