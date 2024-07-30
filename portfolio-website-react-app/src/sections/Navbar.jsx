@@ -48,7 +48,20 @@ function Navbar() {
         </a>
         <div className={`nav-section-content ${navActive ? "active" : ""}`}>
             <ul>
-                <li>Home</li>
+                <li>
+                    <Link
+                    onClick={closeMenu}
+                    activeClass="navbar--active-content"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                     duration={500}
+                     to="Home"
+                     className="navbar--content"
+                   >
+                    Home
+                    </Link>
+                </li>
                 <li>About Me</li>
                 <li>Experience</li>
                 <li>Portfolio</li>
