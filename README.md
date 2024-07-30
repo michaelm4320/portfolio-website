@@ -61,7 +61,8 @@ This project uses GitHub Actions to automate the build and test processes for bo
 
 ## `package.json` Overview
 
-The `package.json` file is a crucial part of any Node.js project. It contains metadata about the project, including its dependencies, scripts, and configuration. In this project, `package.json` has been configured to handle various tasks related to development and testing.
+The `package.json` file is a crucial part of any Node.js project. It contains metadata about the project, 
+including its dependencies, scripts, and configuration. In this project, `package.json` has been configured to handle various tasks related to development and testing.
 
 ### Scripts
 
