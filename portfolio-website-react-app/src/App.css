@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: "Roboto", sans-serif;
   font-style: normal;
 }
+
 h1,
 h2,
 h3,
@@ -81,8 +82,14 @@ p {
   background-color: var(--primary);
 }
 
-/* Navbar Styler Ends */
+/* Navbar Style Ends */
 
+/* Parallax Container Style */
+.parallax-container {
+  height: 100vh; /* Ensure the parallax container takes the full viewport height */
+}
+
+/* Adjust home section to account for the fixed navbar height */
 .home-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -91,7 +98,7 @@ p {
   justify-content: space-between;
   gap: 32px;
   background-color: var(--bg-shade);
-
+  margin-top: 65px; /* Adjust this value based on the navbar height */
 }
 
 .home-section-content {
@@ -184,7 +191,6 @@ p {
     flex-direction: column-reverse;
     padding-bottom: 70px;
   }
-
 
   .home-section-greeting,
   .home-section-title,
