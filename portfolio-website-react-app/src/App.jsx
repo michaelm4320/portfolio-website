@@ -5,6 +5,8 @@ import './App.css'
 import Navbar from './sections/Navbar';
 import Home from './sections/Home';
 
+import {Parallax, ParallaxLayer } from '@react-spring/parallax';
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -12,7 +14,11 @@ function App() {
     <>
       <div>
         <Navbar />
+        <Parallax pages={1}>
+        <ParallaxLayer offset={0}>
         <Home />
+        </ParallaxLayer>
+        </Parallax>
       </div>
     </>
   )
