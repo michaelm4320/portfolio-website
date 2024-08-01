@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg';
 import './App.css';
 import Navbar from './sections/Navbar';
 import Home from './sections/Home';
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,13 +12,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="parallax-container">
-        <Parallax pages={2}>
-          <ParallaxLayer offset={0} speed={0}>
-            <Home />
-          </ParallaxLayer>
-        </Parallax>
-      </div>
+      <Home />
     </>
   );
 }
