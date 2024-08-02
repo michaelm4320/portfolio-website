@@ -110,7 +110,8 @@ The `scripts` section in `package.json` allows you to define commands that can b
 ## Summary
 
 This setup ensures that the application is thoroughly tested with both end-to-end and unit tests. 
-Playwright handles the e2e testing, simulating user interactions, while Vitest focuses on unit tests for individual components and logic.
+Playwright handles the e2e testing, simulating user interactions, while Vitest focuses on unit tests for 
+individual components and logic.
 
 
 
