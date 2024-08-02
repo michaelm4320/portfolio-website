@@ -81,7 +81,8 @@ The `scripts` section in `package.json` allows you to define commands that can b
 
 ### Playwright
 
-**Playwright** is used for end-to-end (e2e) testing. It ensures that the entire application works correctly from the user's perspective by simulating interactions with the application.
+**Playwright** is used for end-to-end (e2e) testing. It ensures that the entire application works correctly from the user's 
+perspective by simulating interactions with the application.
 
 - **Configuration**:
   - Configuration for Playwright is defined in `playwright.config.cjs`.
