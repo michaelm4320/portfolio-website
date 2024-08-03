@@ -114,8 +114,6 @@ This setup ensures that the application is thoroughly tested with both end-to-en
 Playwright handles the e2e testing, simulating user interactions, while Vitest focuses on unit tests for 
 individual components and logic.
 
-
-
 # Tutorials
 
 https://www.youtube.com/watch?v=_vOInY6SRVE
