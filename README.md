@@ -94,7 +94,8 @@ perspective by simulating interactions with the application.
 
 ### Vitest
 
-**Vitest** is used for unit testing. It tests individual components and functions in isolation to ensure they work correctly.
+**Vitest** is used for unit testing. It tests individual components and functions in isolation to 
+ensure they work correctly.
 
 - **Configuration**:
   - Configuration for Vitest is defined in `vitest.config.js`.
