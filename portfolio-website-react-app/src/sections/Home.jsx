@@ -1,5 +1,5 @@
 import React from 'react';
-import testImg from '../assets/testImg4.png';
+import testImg from '../assets/testImgF1.png';
 import circles from '../assets/circles.png';
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
@@ -7,11 +7,11 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 export default function Home() {
   return (
     <div className="parallax-container">
-        <Parallax pages={2}>
-            <ParallaxLayer offset={.5} speed={2}>
+        <Parallax pages={2}>{/* number is 2 with circles parallax */}
+            {/*<ParallaxLayer offset={.5} speed={2}>
                 <img src={circles} alt="home Section" />
-            </ParallaxLayer>
-            <ParallaxLayer offset={0} speed={1}>
+            </ParallaxLayer> */}
+            <ParallaxLayer offset={0} speed={0}>
                 <section id="homeSection" className="home-section">
                   <div className="home-section-content">
                     <div className="home-section-text">
