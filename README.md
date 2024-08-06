@@ -9,7 +9,7 @@ Built using modern web technologies to create a professional and responsive sing
 
 * Home
 * About Me
-* Tech Stack / Experience
+* Experience
 * Portfolio
 * Testimonials
 * Contact Me
