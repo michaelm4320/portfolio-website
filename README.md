@@ -67,7 +67,8 @@ handle various tasks related to development and testing.
 
 ### Scripts
 
-The `scripts` section in `package.json` allows you to define commands that can be run from the terminal. Here's an overview of the scripts set up for this project:
+The `scripts` section in `package.json` allows you to define commands that can be run from the terminal. 
+Here's an overview of the scripts set up for this project:
 
 - **`dev`**: Runs the Vite development server. Use `npm run dev` to start the development server and view the application locally.
 - **`build`**: Builds the project for production. Use `npm run build` to generate optimized assets for deployment.
