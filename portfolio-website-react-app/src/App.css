@@ -153,8 +153,9 @@ p {
   display: flex;
 }
 
+
 .home-section-img > img {
-  width: 90%;
+  width: 90%; /* Change width to 100% */
   height: 100%;
 }
 
