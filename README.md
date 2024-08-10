@@ -2,8 +2,8 @@
 
 ### Overview
 
-A personal portfolio website showcasing different sections about myself, my experience, projects, testimonials, and a contact form. 
-Built using modern web technologies to create a professional and responsive single-page application.
+A personal portfolio website showcasing different sections about myself, my experience, projects, testimonials, 
+and a contact form. Built using modern web technologies to create a professional and responsive single-page application.
 
 ### Sections
 
