@@ -1,5 +1,4 @@
 // src/StarsCanvas.jsx
-// style={{ background: 'linear-gradient(135deg, rgb(0, 0, 50), rgb(30, 0, 30))' }}
 import { useState, useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
@@ -31,11 +30,13 @@ const Stars = (props) => {
 
 const StarsCanvas = () => {
   return (
-    <div className='stars-canvas'>
+    <div
+      className='stars-canvas'
+      style={{ background: 'linear-gradient(135deg, rgb(0, 0, 50), rgb(30, 0, 30))', height: '100vh', width: '100%' }}
+    >
       <Canvas
           camera={{ position: [0, 0, 1] }}
-          gl={{ alpha: false }}
-          style={{ background: 'rgb(0, 0, 20)' }}
+          gl={{ alpha: true }}
       >
         <Suspense fallback={null}>
           <Stars />
