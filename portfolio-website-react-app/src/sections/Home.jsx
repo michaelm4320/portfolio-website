@@ -8,11 +8,15 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 export default function Home() {
   return (
     <div className="parallax-container">
-        <Parallax pages={2}>{/* number is 2 with circles parallax */}
+        <Parallax pages={1}
+        style={{
+          overflow: "hidden",
+          }}
+        >{/* number is 2 with circles parallax */}
             {/*<ParallaxLayer offset={.5} speed={2}>
                 <img src={circles} alt="home Section" />
             </ParallaxLayer> */}
-            <ParallaxLayer offset={0} speed={0}>
+            <ParallaxLayer>
                 <section id="homeSection" className="home-section">
                   <div className="home-section-content">
                     <div className="home-section-text">

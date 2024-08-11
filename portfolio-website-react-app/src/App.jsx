@@ -6,14 +6,23 @@ import Navbar from './sections/Navbar';
 import Home from './sections/Home';
 import  StarsCanvas from './canvas/StarsCanvas.jsx';
 
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <StarsCanvas />
-      <Navbar />
-      <Home />
+<StarsCanvas />
+      <div className="parallax-container-home">
+      <Parallax pages={2}>
+           <ParallaxLayer offset={0}>
+
+              <Home />
+              <Navbar />
+      </ParallaxLayer>
+    </Parallax>
+    </div>
     </>
   );
 }

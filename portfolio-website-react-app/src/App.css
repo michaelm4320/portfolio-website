@@ -110,6 +110,13 @@ p {
 /* Parallax Container Style */
 .parallax-container {
   height: 100vh; /* Ensure the parallax container takes the full viewport height */
+
+}
+
+/* Parallax Container Style */
+.parallax-container-home {
+  height: 100vh; /* Ensure the parallax container takes the full viewport height */
+  overflow: auto;
 }
 
 /* Adjust home section to account for the fixed navbar height */
