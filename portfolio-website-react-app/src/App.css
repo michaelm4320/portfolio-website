@@ -28,6 +28,20 @@ p {
   --white: #ffffff;
 }
 
+/* src/StarsCanvas.css */
+
+.stars-canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+/* src/StarsCanvas.css */
+
 /* Navbar Style Start */
 .nav-section {
   display: flex;
