@@ -42,6 +42,15 @@ p {
 }
 /* src/StarsCanvas.css */
 
+.canvas-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50vw; /* Adjust width as needed */
+  height: 100vh; /* Make sure it covers the full height */
+  overflow: hidden; /* Ensure model is contained within this area */
+}
+
 /* Navbar Style Start */
 .nav-section {
   display: flex;
@@ -202,9 +211,10 @@ p {
   }
 
   .home-section {
-    display: flex;
-    flex-direction: column-reverse;
-    padding-bottom: 70px;
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 455px;
+        overflow: hidden;
   }
 
   .home-section-greeting,
@@ -217,4 +227,13 @@ p {
     width: 100%;
     height: 100%;
   }
+
+  .canvas-container {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100vw; /* Adjust width as needed */
+      height: 100vh; /* Make sure it covers the full height */
+      overflow: hidden; /* Ensure model is contained within this area */
+    }
 }

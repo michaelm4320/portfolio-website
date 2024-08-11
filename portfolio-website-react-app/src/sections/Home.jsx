@@ -1,6 +1,7 @@
 import React from 'react';
 import testImg from '../assets/testImgF1.png';
 import circles from '../assets/circles.png';
+import Computer from '../canvas/Computers.jsx'; // Adjust the path as necessary
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
@@ -25,7 +26,8 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="home-section-img">
-                    <img src={testImg} alt="home Section" />
+                    <Computer />
+                    {/*<img src={testImg} alt="home Section" />*/}
                   </div>
                 </section>
             </ParallaxLayer>
