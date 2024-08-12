@@ -179,12 +179,12 @@ p {
   line-height: 36px;
 }
 
-.home-section-img {
+.home-section-model {
   display: flex;
 }
 
 
-.home-section-img > img {
+.home-section-model > model {
   width: 90%; /* Change width to 100% */
   height: 100%;
 }
@@ -220,28 +220,32 @@ p {
   .home-section {
         display: flex;
         flex-direction: column-reverse;
+        justify-content: center; /* Vertically centers content */
          width: 100vw; /* Adjust width as needed */
-         height: 110vh; /* Adjust hieght as needed */
-
+         height: 150vh; /* Adjust height as needed */
   }
 
   .home-section-greeting,
   .home-section-title,
   .home-section-description {
-    text-align: center;
+      padding-right: 20%; /* Relative padding */
   }
 
-  .home-section-img > img {
+  .home-section-model > model {
     width: 100%;
     height: 100%;
   }
+
+.btn-contact {
+  margin-top: 0px; /* Add margin to separate button from text */
+}
 
   .canvas-container {
       position: absolute;
       right: 0;
       top: 0;
       width: 100vw; /* Adjust width as needed */
-      height: 100vh; /* Make sure it covers the full height */
+      height: 85vh; /* Make sure it covers the full height */
       overflow: hidden; /* Ensure model is contained within this area */
     }
 }

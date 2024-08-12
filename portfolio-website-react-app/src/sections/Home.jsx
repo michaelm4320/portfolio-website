@@ -29,7 +29,7 @@ export default function Home() {
                         <button className="btn-contact">Contact Me</button>
                     </div>
                   </div>
-                  <div className="home-section-img">
+                  <div className="home-section-model">
                     <Computer />
                     {/*<img src={testImg} alt="home Section" />*/}
                   </div>
