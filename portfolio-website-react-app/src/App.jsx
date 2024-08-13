@@ -18,10 +18,10 @@ function App() {
     <StarsCanvas />
       <div className="parallax-container-home">
       <Parallax pages={3}>
-          <ParallaxLayer offset={0} speed={0.5} style={{ height: '300vh' }}>
+          <ParallaxLayer offset={0} style={{ height: '150vh' }}>
                 <Home />
            </ParallaxLayer>
-           <ParallaxLayer offset={1} speed={0.5}>
+           <ParallaxLayer offset={1}>
                 <AboutMe />
            </ParallaxLayer>
     </Parallax>

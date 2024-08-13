@@ -220,7 +220,7 @@ p {
   .home-section {
         display: flex;
         flex-direction: column-reverse;
-        justify-content: center; /* Vertically centers content */
+        justify-content: center; /* Vertically centers content to prevent scrolling with height window adjustment */
          width: 100vw; /* Adjust width as needed */
          height: 150vh; /* Adjust height as needed */
   }
