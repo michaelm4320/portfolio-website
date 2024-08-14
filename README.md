@@ -13,6 +13,7 @@ responsive single-page application.
 * Experience
 * Portfolio
 * Testimonials
+* Resume
 * Contact Me
 
 ### Tech Stack
