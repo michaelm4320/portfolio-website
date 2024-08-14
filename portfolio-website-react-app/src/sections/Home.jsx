@@ -7,16 +7,7 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 export default function Home() {
   return (
-    <div className="parallax-container">
-        <Parallax pages={1}
-        style={{
-          overflow: "hidden",
-          }}
-        >{/* number is 2 with circles parallax */}
-            {/*<ParallaxLayer offset={.5} speed={2}>
-                <img src={circles} alt="home Section" />
-            </ParallaxLayer> */}
-            <ParallaxLayer>
+
                 <section id="homeSection" className="home-section">
                   <div className="home-section-content">
                     <div className="home-section-text">
@@ -31,11 +22,7 @@ export default function Home() {
                   </div>
                   <div className="home-section-model">
                     <Computer />
-                    {/*<img src={testImg} alt="home Section" />*/}
                   </div>
                 </section>
-            </ParallaxLayer>
-        </Parallax>
-    </div>
   );
 }

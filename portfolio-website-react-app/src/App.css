@@ -183,11 +183,64 @@ p {
   display: flex;
 }
 
-
 .home-section-model > model {
   width: 90%; /* Change width to 100% */
   height: 100%;
 }
+/* Home Section End */
+
+/* About Me Section Start */
+.about-section {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  /*background-color: var(--bg-shade);*/
+}
+
+/* Container for content */
+.about-section-content {
+    align-items: center;
+    display: grid;
+    gap: 114.6px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 133.3px 85.3px;
+}
+
+/* Image styling */
+.about-section-img img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Text styling */
+.about-section-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 21.333px;
+}
+
+.about-section-title {
+  color: var(--white);
+  font-size: 74.667px;
+  font-weight: 700;
+  line-height: 90px;
+  align-self: stretch;
+}
+
+.about-section-description {
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+/* About Me Section Ends */
+
+
 
 .btn-contact {
   font-family: "Roboto";

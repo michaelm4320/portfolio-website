@@ -7,22 +7,18 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 export default function AboutMe() {
   return (
-                <section id="homeSection" className="home-section">
-                  <div className="home-section-content">
-                    <div className="home-section-text">
-                        <p className="home-section-greeting">Hello, I'm Michael</p>
-                        <h1 className="home-section-title">About
-                        <br />
-                        Me
+                <section id="aboutSection" className="about-section">
+                  <div className="about-section-content">
+                    <div className="about-section-img">
+                        <img src={testImg} alt="about Section" />
+                    </div>
+                    <div className="about-section-text">
+                        <h1 className="about-section-title">About Me
                         </h1>
-                        <p className="home-section-description">Passionate about developing innovative software solutions to solve real-world problems.</p>
-                        <button className="btn-contact">Contact Me</button>
+                        <p className="about-section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
                   </div>
-                  <div className="home-section-model">
-                    <img src={testImg} alt="home Section" />
-                  </div>
                 </section>
-
   );
 }

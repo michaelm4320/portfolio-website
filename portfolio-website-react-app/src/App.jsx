@@ -20,8 +20,6 @@ function App() {
       <Parallax pages={3}>
           <ParallaxLayer offset={0} style={{ height: '150vh' }}>
                 <Home />
-           </ParallaxLayer>
-           <ParallaxLayer offset={1}>
                 <AboutMe />
            </ParallaxLayer>
     </Parallax>
