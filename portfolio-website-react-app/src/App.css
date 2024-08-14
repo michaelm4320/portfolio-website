@@ -53,9 +53,42 @@ p {
   right: 0;
   top: 0;
   width: 50vw; /* Adjust width as needed */
-  height: 100vh; /* Make sure it covers the full height */
+  height: 85vh; /* Make sure it covers the full height */
   overflow: hidden; /* Ensure model is contained within this area */
 }
+
+.btn {
+  font-family: "Roboto";
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -ms-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+}
+.btn-outline-primary {
+  color: var(--primary);
+  background-color: var(--white);
+  border: 1px solid var(--primary);
+}
+.btn-outline-primary:hover {
+  color: var(--white);
+  background-color: var(--primary);
+}
+
 
 /* Navbar Style Start */
 .nav-section {
@@ -271,10 +304,13 @@ p {
   color: var(--primary);
 }
 
+
+
 @media only screen and (max-width: 1200px) {
-  .btn-nav {
-    display: none;
-  }
+
+  .btn-outline-primary {
+      display: none;
+    }
 
   .home-section {
         display: flex;
@@ -327,5 +363,88 @@ p {
         position: relative; /* Allow for regular flow */
         top: 30px;
         right: -10px;
-        }
+     }
+
+     /* Hamburger menu  */
+
+     .nav__hamburger {
+       display: none;
+       width: 1.875rem;
+       height: 1.313rem;
+       flex-direction: column;
+       justify-content: space-around;
+       position: absolute;
+       top: 25px;
+       right: 25px;
+     }
+
+     .nav__hamburger__line {
+       display: block;
+       height: 0.188rem;
+       width: 100%;
+       background-color: #000000;
+       border-radius: 0.625rem;
+       transition: all ease-in-out 0.2s;
+     }
+ }
+
+    @media screen and (max-width: 1200px) {
+
+    .nav__hamburger {
+        display: flex;
+        z-index: 200;
+      }
+
+        .nav-section-content {
+            display: flex;
+          }
+          .nav-section-content {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255);
+            top: -40rem; /* Adjust height for items on hamburger */
+            left: 0;
+            width: 100%;
+            transition: all ease-in-out 0.4s;
+          }
+
+          .nav-section-content ul {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 3rem 0 0.6rem;
+            z-index: -100;
+          }
+          .nav-section-content ul li {
+            text-align: center;
+          }
+          .nav-section-content ul li a {
+            padding: 0.5rem;
+          }
+          .nav-section-content {
+            z-index: -1000;
+          }
+          .nav-section-content.active {
+            top: 30px;
+          }
+
+
+          .nav-section-contact.active {
+            opacity: 0;
+           }
+
+       .nav__hamburger.active :nth-child(1) {
+         transform: rotate(45deg) translate(0.45rem, 0.1875rem);
+       }
+
+       .nav__hamburger.active :nth-child(2) {
+         opacity: 0;
+       }
+
+       .nav__hamburger.active :nth-child(3) {
+         transform: rotate(-45deg) translate(0.45rem, -0.1875rem);
+       }
+    }
 }

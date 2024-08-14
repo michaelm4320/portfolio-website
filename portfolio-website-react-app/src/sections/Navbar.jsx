@@ -62,15 +62,38 @@ function Navbar() {
                     Home
                     </Link>
                 </li>
-                <li>About Me</li>
+                <li>
+                    <Link
+                        onClick={closeMenu}
+                        activeClass="navbar--active-content"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                        to="AboutMe"
+                        className="navbar--content"
+                                  >
+                                    About Me
+                                  </Link>
+                               </li>
                 <li>Experience</li>
                 <li>Portfolio</li>
                 <li>Testimonials</li>
+                <li>Resume</li>
             </ul>
         </div>
-        <div className="nav-section-btn">
-            <button className="btn-nav">Contact Me</button>
-        </div>
+        <Link
+                onClick={closeMenu}
+                activeClass="navbar--active-content"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                to="Contact"
+                className="btn btn-outline-primary"
+              >
+                Contact Me
+        </Link>
     </nav>
   );
 }
