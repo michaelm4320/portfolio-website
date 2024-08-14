@@ -14,16 +14,10 @@ function App() {
 
   return (
     <>
-    <Navbar />
-    <StarsCanvas />
-      <div className="parallax-container-home">
-      <Parallax pages={3}>
-          <ParallaxLayer offset={0} style={{ height: '150vh' }}>
-                <Home />
-                <AboutMe />
-           </ParallaxLayer>
-    </Parallax>
-    </div>
+        <Navbar />
+        <StarsCanvas />
+        <Home />
+        <AboutMe />
     </>
   );
 }

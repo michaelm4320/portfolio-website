@@ -32,7 +32,16 @@ const StarsCanvas = () => {
   return (
     <div
       className='stars-canvas'
-      style={{ background: 'linear-gradient(135deg, rgb(0, 0, 50), rgb(30, 0, 30))', height: '100vh', width: '100%' }}
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100vw',
+        height: '100vh',
+        zIndex: -1, // Ensure it's behind other content
+        pointerEvents: 'none', // So it doesn't interfere with scrolling or clicking
+        background: 'linear-gradient(135deg, rgb(0, 0, 50), rgb(30, 0, 30))'
+      }}
     >
       <Canvas
           camera={{ position: [0, 0, 1] }}
