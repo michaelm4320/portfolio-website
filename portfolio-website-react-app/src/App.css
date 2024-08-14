@@ -1,4 +1,9 @@
 /* Global CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -6,6 +11,7 @@ body {
   -webkit-font-smoothing: "Roboto", sans-serif;
   -moz-osx-font-smoothing: "Roboto", sans-serif;
   font-style: normal;
+  overflow-x: hidden;
 }
 
 h1,
@@ -274,14 +280,16 @@ p {
         display: flex;
         flex-direction: column-reverse;
         justify-content: center; /* Vertically centers content to prevent scrolling with height window adjustment */
-         width: 100vw; /* Adjust width as needed */
-         height: auto; /* Adjust height as needed */
-         padding: 50px;
-         margin: 0px;
+         width: calc(100vw - 10%); /* Subtracting the combined padding from the width */
+           height: auto;
+           padding: 0 5%;
+           margin: 0; /* Removing the negative margin */
   }
-  .home-section-text {
-    margin-top: 550px;
-  }
+
+ .home-section-text {
+         padding-left: 5%; /* Adjust this value as needed */
+         margin-top: 10px;
+     }
 
   .about-section {
       display: flex;
@@ -294,14 +302,14 @@ p {
   .home-section-greeting,
   .home-section-title,
   .home-section-description {
-      padding-right: 20%; /* Relative padding */
+      padding-right: 10%; /* Relative padding */
   }
 
   .about-section-content {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 40px;
+    padding: 40px 5%;
   }
 
   .home-section-model > model {
@@ -313,12 +321,11 @@ p {
       margin-top: 0px; /* Add margin to separate button from text */
   }
 
-  .canvas-container {
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 100vw; /* Adjust width as needed */
-      height: 85vh; /* Make sure it covers the full height */
-      overflow: hidden; /* Ensure model is contained within this area */
-    }
+     .canvas-container {
+        height: 50vh; /* Limit canvas height on mobile devices */
+        width: 100vw; /* Ensure canvas takes up the full width */
+        position: relative; /* Allow for regular flow */
+        top: 30px;
+        right: -10px;
+        }
 }
