@@ -241,11 +241,11 @@ p {
 
 /* Container for content */
 .about-section-content {
-    align-items: center;
-    display: grid;
-    gap: 114.6px;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 133.3px 85.3px;
+  align-items: center;
+  display: grid;
+  gap: 114.6px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 133.3px 85.3px;
 }
 
 /* Image styling */
@@ -256,10 +256,10 @@ p {
 
 /* Text styling */
 .about-section-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 21.333px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 21.333px;
 }
 
 .about-section-title {
@@ -307,38 +307,37 @@ p {
 
 
 @media only screen and (max-width: 1200px) {
-
   .btn-outline-primary {
-      display: none;
-    }
+    display: none;
+  }
 
   .home-section {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center; /* Vertically centers content to prevent scrolling with height window adjustment */
-         width: calc(100vw - 10%); /* Subtracting the combined padding from the width */
-           height: auto;
-           padding: 0 5%;
-           margin: 0; /* Removing the negative margin */
+    display: flex;
+    flex-direction: column-reverse;
+    ustify-content: center; /* Vertically centers content to prevent scrolling with height window adjustment */
+    width: calc(100vw - 10%); /* Subtracting the combined padding from the width */
+    height: auto;
+    padding: 0 5%;
+    margin: 0; /* Removing the negative margin */
   }
 
  .home-section-text {
-         padding-left: 5%; /* Adjust this value as needed */
-         margin-top: 10px;
-     }
+    padding-left: 5%; /* Adjust this value as needed */
+    margin-top: 10px;
+  }
 
   .about-section {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      padding-top: 0;
-      padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .home-section-greeting,
   .home-section-title,
   .home-section-description {
-      padding-right: 10%; /* Relative padding */
+    padding-right: 10%; /* Relative padding */
   }
 
   .about-section-content {
@@ -354,97 +353,101 @@ p {
   }
 
   .btn-contact {
-      margin-top: 0px; /* Add margin to separate button from text */
+    margin-top: 0px; /* Add margin to separate button from text */
   }
 
-     .canvas-container {
-        height: 50vh; /* Limit canvas height on mobile devices */
-        width: 100vw; /* Ensure canvas takes up the full width */
-        position: relative; /* Allow for regular flow */
-        top: 30px;
-        right: -10px;
-     }
+  .canvas-container {
+    height: 50vh; /* Limit canvas height on mobile devices */
+    width: 100vw; /* Ensure canvas takes up the full width */
+    position: relative; /* Allow for regular flow */
+    top: 30px;
+    right: -10px;
+  }
 
      /* Hamburger menu  */
 
-     .nav__hamburger {
-       display: none;
-       width: 1.875rem;
-       height: 1.313rem;
-       flex-direction: column;
-       justify-content: space-around;
-       position: absolute;
-       top: 25px;
-       right: 25px;
-     }
+  .nav__hamburger {
+    display: none;
+    width: 1.875rem;
+    height: 1.313rem;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+  }
 
-     .nav__hamburger__line {
-       display: block;
-       height: 0.188rem;
-       width: 100%;
-       background-color: #000000;
-       border-radius: 0.625rem;
-       transition: all ease-in-out 0.2s;
-     }
- }
+  .nav__hamburger__line {
+    display: block;
+    height: 0.188rem;
+    width: 100%;
+    background-color: #000000;
+    border-radius: 0.625rem;
+    transition: all ease-in-out 0.2s;
+   }
+}
 
     @media screen and (max-width: 1200px) {
 
     .nav__hamburger {
-        display: flex;
-        z-index: 200;
-      }
+      display: flex;
+      z-index: 200;
+   }
 
-        .nav-section-content {
-            display: flex;
-          }
-          .nav-section-content {
-            position: absolute;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(255, 255, 255);
-            top: -40rem; /* Adjust height for items on hamburger */
-            left: 0;
-            width: 100%;
-            transition: all ease-in-out 0.4s;
-          }
+    .nav-section-content {
+      display: flex;
+    }
 
-          .nav-section-content ul {
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            padding: 3rem 0 0.6rem;
-            z-index: -100;
-          }
-          .nav-section-content ul li {
-            text-align: center;
-          }
-          .nav-section-content ul li a {
-            padding: 0.5rem;
-          }
-          .nav-section-content {
-            z-index: -1000;
-          }
-          .nav-section-content.active {
-            top: 30px;
-          }
+    .nav-section-content {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(255, 255, 255);
+      top: -40rem; /* Adjust height for items on hamburger */
+      left: 0;
+      width: 100%;
+      transition: all ease-in-out 0.4s;
+    }
+
+    .nav-section-content ul {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 3rem 0 0.6rem;
+      z-index: -100;
+    }
+
+    .nav-section-content ul li {
+      text-align: center;
+    }
+
+    .nav-section-content ul li a {
+      padding: 0.5rem;
+    }
+
+    .nav-section-content {
+      z-index: -1000;
+    }
+
+    .nav-section-content.active {
+      top: 30px;
+    }
 
 
-          .nav-section-contact.active {
-            opacity: 0;
-           }
+    .nav-section-contact.active {
+      opacity: 0;
+    }
 
-       .nav__hamburger.active :nth-child(1) {
-         transform: rotate(45deg) translate(0.45rem, 0.1875rem);
-       }
+    .nav__hamburger.active :nth-child(1) {
+      transform: rotate(45deg) translate(0.45rem, 0.1875rem);
+    }
 
-       .nav__hamburger.active :nth-child(2) {
-         opacity: 0;
-       }
+    .nav__hamburger.active :nth-child(2) {
+      opacity: 0;
+    }
 
-       .nav__hamburger.active :nth-child(3) {
-         transform: rotate(-45deg) translate(0.45rem, -0.1875rem);
-       }
+    .nav__hamburger.active :nth-child(3) {
+      transform: rotate(-45deg) translate(0.45rem, -0.1875rem);
     }
 }

@@ -7,7 +7,6 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 export default function Home() {
   return (
-
                 <section id="homeSection" className="home-section">
                   <div className="home-section-content">
                     <div className="home-section-text">
