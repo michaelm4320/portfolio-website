@@ -10,12 +10,14 @@ export default function Hero() {
     <section id="heroSection" className="hero-section">
         <div className="hero-section-content">
             <div className="hero-section-text">
-                <p className="hero-section-greeting">Hello, I'm Michael</p>
+                <p className="hero-section-greeting">Hello, I'm Michael!</p>
                 <h1 className="hero-section-title">Software
                 <br />
                 Engineer
                 </h1>
-                <p className="hero-section-description">Passionate about developing innovative software solutions to solve real-world problems.</p>
+                <p className="hero-section-description">Building the future to create impactful software solutions for a
+                    brighter tomorrow.
+                </p>
                 <button className="btn-contact">Contact Me</button>
             </div>
         </div>

@@ -21,7 +21,7 @@ const YourModel = () => {
       <primitive
         object={model.scene}
         scale={10.65} // Unified scale
-        position={[0.5, 0.5, -5.8]} // Unified position
+        position={[0.0, 0.5, -5.8]} // Unified position
         rotation={[-0.00, -0.00, -0.0]}
       />
     </mesh>

@@ -162,7 +162,7 @@ p {
 .hero-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 133.333px 85.333px 133.333px;
+  padding: 133.333px 200.333px 133.333px;
   align-items: center;
   justify-content: space-between;
   gap: 32px;
@@ -189,8 +189,8 @@ p {
 }
 
 .hero-section-greeting {
-  color: var(--heading-color);
-  font-size: 21px;
+  color: rgb(180 186 255);
+  font-size: 30px;
   text-align: center;
   font-style: normal;
   font-weight: 600;
@@ -200,10 +200,10 @@ p {
 }
 
 .hero-section-title {
-  color: var(--heading-color);
-  font-size: 74.667px;
+  color: white;
+  font-size: 80px;
   font-weight: 700;
-  line-height: 90px;
+  line-height: 120px;
   align-self: stretch;
 }
 
@@ -212,7 +212,7 @@ p {
 }
 
 .hero-section-description {
-  color: var(--darkblue);
+  color: white;
   font-size: 24px;
   font-weight: 400;
   line-height: 36px;

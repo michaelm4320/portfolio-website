@@ -59,7 +59,7 @@ function Navbar() {
                      to="Hero"
                      className="navbar--content"
                    >
-                    Hero
+                    Home
                     </Link>
                 </li>
                 <li>
