@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 import Navbar from './sections/Navbar';
-import Home from './sections/Home';
+import Hero from './sections/Hero';
 import  StarsCanvas from './canvas/StarsCanvas.jsx';
 import AboutMe from "./sections/AboutMe.jsx";
 
@@ -16,7 +16,7 @@ function App() {
     <>
         <Navbar />
         <StarsCanvas />
-        <Home />
+        <Hero />
         <AboutMe />
     </>
   );

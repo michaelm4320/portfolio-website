@@ -56,10 +56,10 @@ function Navbar() {
                     smooth={true}
                     offset={-70}
                      duration={500}
-                     to="Home"
+                     to="Hero"
                      className="navbar--content"
                    >
-                    Home
+                    Hero
                     </Link>
                 </li>
                 <li>

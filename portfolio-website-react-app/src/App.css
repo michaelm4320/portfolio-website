@@ -153,13 +153,13 @@ p {
 }
 
 /* Parallax Container Style */
-.parallax-container-home {
+.parallax-container-hero {
   height: 100vh; /* Ensure the parallax container takes the full viewport height */
   overflow: auto;
 }
 
-/* Adjust home section to account for the fixed navbar height */
-.home-section {
+/* Adjust hero section to account for the fixed navbar height */
+.hero-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 133.333px 85.333px 133.333px;
@@ -170,25 +170,25 @@ p {
   margin-top: 65px; /* Adjust this value based on the navbar height */
 }
 
-.home-section-content {
+.hero-section-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
 }
 
-.home-section-text {
+.hero-section-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 21.333px;
 }
 
-.home-section-text p {
+.hero-section-text p {
   margin: 0;
 }
 
-.home-section-greeting {
+.hero-section-greeting {
   color: var(--heading-color);
   font-size: 21px;
   text-align: center;
@@ -199,7 +199,7 @@ p {
   align-items: flex-start;
 }
 
-.home-section-title {
+.hero-section-title {
   color: var(--heading-color);
   font-size: 74.667px;
   font-weight: 700;
@@ -207,26 +207,26 @@ p {
   align-self: stretch;
 }
 
-.home-section-title span {
+.hero-section-title span {
   color: var(--primary);
 }
 
-.home-section-description {
+.hero-section-description {
   color: var(--darkblue);
   font-size: 24px;
   font-weight: 400;
   line-height: 36px;
 }
 
-.home-section-model {
+.hero-section-model {
   display: flex;
 }
 
-.home-section-model > model {
+.hero-section-model > model {
   width: 90%; /* Change width to 100% */
   height: 100%;
 }
-/* Home Section End */
+/* Hero Section End */
 
 /* About Me Section Start */
 .about-section {
@@ -311,7 +311,7 @@ p {
     display: none;
   }
 
-  .home-section {
+  .hero-section {
     display: flex;
     flex-direction: column-reverse;
     ustify-content: center; /* Vertically centers content to prevent scrolling with height window adjustment */
@@ -321,7 +321,7 @@ p {
     margin: 0; /* Removing the negative margin */
   }
 
- .home-section-text {
+ .hero-section-text {
     padding-left: 5%; /* Adjust this value as needed */
     margin-top: 10px;
   }
@@ -334,9 +334,9 @@ p {
     padding-bottom: 0;
   }
 
-  .home-section-greeting,
-  .home-section-title,
-  .home-section-description {
+  .hero-section-greeting,
+  .hero-section-title,
+  .hero-section-description {
     padding-right: 10%; /* Relative padding */
   }
 
@@ -347,7 +347,7 @@ p {
     padding: 40px 5%;
   }
 
-  .home-section-model > model {
+  .hero-section-model > model {
     width: 100%;
     height: 100%;
   }
