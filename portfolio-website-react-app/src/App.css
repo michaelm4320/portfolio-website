@@ -162,7 +162,7 @@ p {
 .hero-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 133.333px 200.333px 133.333px;
+  padding: 133.333px 80.333px 133.333px;
   align-items: center;
   justify-content: space-between;
   gap: 32px;
@@ -219,11 +219,14 @@ p {
 }
 
 .hero-section-model {
-  display: flex;
+  position: relative;
+  width: 100%;
+  height: 500px; /* Adjust the height as needed */
+  overflow: hidden;
 }
 
-.hero-section-model > model {
-  width: 90%; /* Change width to 100% */
+.hero-section-model canvas {
+  width: 100%;
   height: 100%;
 }
 /* Hero Section End */
@@ -345,6 +348,14 @@ p {
     flex-direction: column;
     gap: 10px;
     padding: 40px 5%;
+  }
+
+  .hero-section-model {
+    position: relative;
+    margin-top: 100px;
+    width: 100%;
+    height: 320px; /* Adjust the height as needed */
+    overflow: hidden;
   }
 
   .hero-section-model > model {

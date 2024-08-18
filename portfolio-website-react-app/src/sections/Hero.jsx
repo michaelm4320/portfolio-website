@@ -1,4 +1,5 @@
 import React from 'react';
+import Earth from '../canvas/Earth.jsx';
 import testImg from '../assets/testImgF1.png';
 import circles from '../assets/circles.png';
 import Computer from '../canvas/Computers.jsx'; // Adjust the path as necessary
@@ -15,14 +16,12 @@ export default function Hero() {
                 <br />
                 Engineer
                 </h1>
-                <p className="hero-section-description">Building the future to create impactful software solutions for a
-                    brighter tomorrow.
-                </p>
+                <p className="hero-section-description">Building the future for a brighter tomorrow.</p>
                 <button className="btn-contact">Contact Me</button>
             </div>
         </div>
         <div className="hero-section-model">
-            <Computer />
+            <Earth />
         </div>
     </section>
   );

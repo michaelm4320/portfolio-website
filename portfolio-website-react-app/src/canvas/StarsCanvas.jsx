@@ -40,7 +40,7 @@ const StarsCanvas = () => {
         height: '100vh',
         zIndex: -1, // Ensure it's behind other content
         pointerEvents: 'none', // So it doesn't interfere with scrolling or clicking
-        background: 'linear-gradient(135deg, rgb(0, 0, 50), rgb(30, 0, 30))'
+        background: 'linear-gradient(135deg, rgb(10, 0, 0), rgb(0, 0, 30))'
       }}
     >
       <Canvas
