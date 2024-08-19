@@ -281,15 +281,33 @@ p {
 
 
 
+/* Container with sci-fi HUD border */
 .about-section-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 21.333px;
-  background-color: rgba(255, 255, 255, 0.25); /* Semi-transparent white background */
+  background-color: rgba(0, 220, 255, 0.2); /* Semi-transparent white background */
   padding: 40px;
   border-radius: 15px;
-  color: var(--black); /* Ensure text color remains opaque */
+  color: var(--black);
+  position: relative;
+  border: 2px solid rgba(0, 255, 255, 0.6); /* Cyan border with transparency */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Glowing shadow */
+  outline: 2px solid rgba(0, 255, 255, 0.2); /* Additional outer glow */
+  animation: hud-glow 2s infinite alternate;
+}
+
+/* Sci-fi glowing animation */
+@keyframes hud-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.4), 0 0 15px rgba(0, 255, 255, 0.3);
+    outline: 2px solid rgba(0, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.7), 0 0 40px rgba(0, 255, 255, 0.6);
+    outline: 2px solid rgba(0, 255, 255, 0.5);
+  }
 }
 
 .about-section-title {
