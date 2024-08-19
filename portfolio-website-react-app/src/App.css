@@ -193,7 +193,7 @@ p {
 }
 
 .hero-section-greeting {
-  color: rgba(0, 220, 255);
+  color: rgba(0, 255, 255);
   font-size: 30px;
   text-align: center;
   font-style: normal;
@@ -254,29 +254,28 @@ p {
   padding: 133.3px 85.3px;
 }
 
+
 /* Container for profile image with sci-fi HUD border */
 .about-section-img {
+  margin: 90px;
   display: flex;
   justify-content: center; /* Center the image */
   align-items: center;
-  padding: 20px; /* Adjust padding as needed */
   border-radius: 50%; /* Make the image container circular */
   background: rgba(0, 220, 255, 0.1); /* Semi-transparent background */
   position: relative;
-  border: 2px solid rgba(0, 255, 255, 0.6); /* Cyan border with transparency */
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Glowing shadow */
-  outline: 2px solid rgba(0, 255, 255, 0.2); /* Additional outer glow */
-  animation: img-glow 2s infinite alternate, float 4s ease-in-out infinite; /* Add floating animation */
+  border: 4px solid rgba(0, 255, 255, 0.6); /* Increase border size for a more prominent effect */
+  animation: img-glow 2s infinite alternate, float 4s ease-in-out infinite; /* Floating animation */
 }
 
 /* Sci-fi glowing animation for the profile image */
 @keyframes img-glow {
   0% {
-    box-shadow: 0 0 5px rgba(0, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.4), 0 0 15px rgba(0, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 15px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.4);
     outline: 2px solid rgba(0, 255, 255, 0.2);
   }
   100% {
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.7), 0 0 40px rgba(0, 255, 255, 0.6);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8), 0 0 35px rgba(0, 255, 255, 0.7), 0 0 45px rgba(0, 255, 255, 0.6);
     outline: 2px solid rgba(0, 255, 255, 0.5);
   }
 }
@@ -387,14 +386,6 @@ p {
     margin-top: 10px;
   }
 
-  .about-section {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
   .hero-section-greeting,
   .hero-section-title,
   .hero-section-description {
@@ -408,13 +399,6 @@ p {
     line-height: 120px;
   }
 
-  .about-section-content {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 40px 5%;
-  }
-
   .hero-section-model {
     position: relative;
     margin-top: 100px;
@@ -423,9 +407,36 @@ p {
     overflow: hidden;
   }
 
-  .hero-section-model > model {
-    width: 100%;
-    height: 100%;
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .about-section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px 5%;
+  }
+
+  .about-section-title {
+    font-size: 73px;
+  }
+
+  .about-section-text {
+    padding: 5px;
+  }
+
+  .about-section-img {
+    margin: 10px;
+  }
+
+  .about-section-img img {
+    width: 85%;
+    height: auto;
   }
 
   .btn-contact {
