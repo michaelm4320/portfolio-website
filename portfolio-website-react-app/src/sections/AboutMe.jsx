@@ -1,5 +1,5 @@
 import React from 'react';
-import testImg from '../assets/testImgcircle.png';
+import testImg from '../assets/testImg5.png';
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 

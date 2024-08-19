@@ -251,33 +251,24 @@ p {
   padding: 133.3px 85.3px;
 }
 
-/* Image styling */
-.about-section-img img {
-  width: 80%;
-  height: auto;
-}
-
-
-
-/* Container with sci-fi HUD border */
-.about-section-text {
+/* Container for profile image with sci-fi HUD border */
+.about-section-img {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 21.333px;
-  background-color: rgba(0, 220, 255, 0.2); /* Semi-transparent white background */
-  padding: 40px;
-  border-radius: 15px;
-  color: var(--black);
+  justify-content: center; /* Center the image */
+  align-items: center;
+  width: 100%;
+  padding: 20px; /* Adjust padding as needed */
+  border-radius: 50%; /* Make the image container circular */
+  background: rgba(0, 220, 255, 0.1); /* Semi-transparent background */
   position: relative;
   border: 2px solid rgba(0, 255, 255, 0.6); /* Cyan border with transparency */
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Glowing shadow */
   outline: 2px solid rgba(0, 255, 255, 0.2); /* Additional outer glow */
-  animation: hud-glow 2s infinite alternate;
+  animation: img-glow 2s infinite alternate; /* Glowing animation */
 }
 
-/* Sci-fi glowing animation */
-@keyframes hud-glow {
+/* Sci-fi glowing animation for the profile image */
+@keyframes img-glow {
   0% {
     box-shadow: 0 0 5px rgba(0, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.4), 0 0 15px rgba(0, 255, 255, 0.3);
     outline: 2px solid rgba(0, 255, 255, 0.2);
@@ -288,6 +279,18 @@ p {
   }
 }
 
+
+
+.about-section-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 21.333px;
+  background-color: rgba(255, 255, 255, 0.25); /* Semi-transparent white background */
+  padding: 40px;
+  border-radius: 15px;
+  color: var(--black); /* Ensure text color remains opaque */
+}
 
 .about-section-title {
   color: var(--white);
