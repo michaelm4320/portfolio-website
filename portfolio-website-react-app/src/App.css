@@ -1,3 +1,6 @@
+
+/* Import the font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 /* Global CSS */
 *,
 *::before,
@@ -257,32 +260,40 @@ p {
   height: auto;
 }
 
-
-
 /* Container with sci-fi HUD border */
 .about-section-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 21.333px;
-  background-color: rgba(0, 110, 255, 0.2); /* Semi-transparent white background */
+  gap: 30.333px;
   padding: 40px;
   border-radius: 15px;
   color: var(--black);
   position: relative;
-  border: 2px solid rgba(0, 110, 255, 0.6); /* Cyan border with transparency */
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Glowing shadow */
-  outline: 2px solid rgba(0, 255, 255, 0.2); /* Additional outer glow */
-  animation: hud-glow 2s infinite alternate;
 }
 
+
+
 .about-section-title {
-  color: var(--white);
-  font-size: 74.667px;
+  position: relative;
+  font-size: 85.667px;
   font-weight: 700;
-  line-height: 90px;
-  align-self: stretch;
+  color: var(--white);
+  margin-bottom: 20px;
 }
+
+.about-section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(0,255,255,0.8) 70%, rgba(0,255,255,0) 100%);
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0,255,255,0.5);
+}
+
 
 .about-section-description {
   color: var(--white);
