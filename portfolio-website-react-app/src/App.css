@@ -193,6 +193,7 @@ p {
 }
 
 .hero-section-greeting {
+flex-wrap: wrap; /* Ensures the text wraps as needed */
   color: white;
   font-size: 30px;
   text-align: center;
@@ -396,7 +397,7 @@ p {
   .hero-section-greeting,
   .hero-section-title,
   .hero-section-description {
-
+    gap: 3px;
     text-align: center;
   }
 
