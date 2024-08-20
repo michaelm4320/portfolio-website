@@ -193,7 +193,7 @@ p {
 }
 
 .hero-section-greeting {
-  color: rgba(0, 255, 255);
+  color: white;
   font-size: 30px;
   text-align: center;
   font-style: normal;
@@ -202,6 +202,12 @@ p {
   display: flex;
   align-items: flex-start;
 }
+
+.hero-section-name {
+  color: rgba(0, 255, 255); /* Different color for your name */
+  font-weight: bold; /* Optional: make your name bold */
+}
+
 
 .hero-section-title {
   color: white;
