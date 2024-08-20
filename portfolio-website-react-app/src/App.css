@@ -550,3 +550,9 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
       transform: rotate(-45deg) translate(0.45rem, -0.1875rem);
     }
 }
+
+@media only screen and (max-width: 605px) {
+    .hero-section-greeting {
+        gap: 10px;
+    }
+}
