@@ -12,7 +12,7 @@ export default function Hero() {
         <div className="hero-section-content">
             <div className="hero-section-text">
                 <p className="hero-section-greeting">
-                  Hi, my name is&nbsp;<span className="hero-section-name"> Michael Martinez</span>
+                  Hi, my name is&nbsp;<span className="hero-section-name">Michael Martinez</span>
                 </p>
                 <h1 className="hero-section-title">Software
                 <br />
