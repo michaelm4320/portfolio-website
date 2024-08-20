@@ -13,11 +13,17 @@ export default function AboutMe() {
             <div className="about-section-box">
                 <div className="about-section-text">
                     <h1 className="about-section-title">About Me</h1>
-                    <p className="about-section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <p className="about-section-description">I'm Michael, a Software Engineer driven by a passion for
+                        creating innovative software solutions that shape a brighter tomorrow. My journey in technology
+                        began when I picked up my first Nintendo controller, sparking a lifelong enthusiasm for all things
+                        tech. Since then, I’ve committed myself to continuous learning, always striving to design smarter,
+                        more robust software applications.
+                    <br /> <br />
+                        With each project, I'm constantly pushing the boundaries of my development skills, one line of
+                        code at a time. My goal is to bring joy and put smiles on people's faces through the software I
+                        build in order to help make a positive impact for our community. And when I'm not coding, I'm
+                        playing my favorite video games and exploring ways how I can enhance the games I grew up with by
+                        creating mods for games like Minecraft.
                     </p>
                 </div>
             </div>
