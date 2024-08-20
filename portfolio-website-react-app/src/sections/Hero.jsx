@@ -17,8 +17,8 @@ export default function Hero() {
                 Engineer
                 </h1>
                 <p className="hero-section-description">Building the future for a brighter tomorrow.</p>
-                <button className="btn-contact">Contact Me</button>
             </div>
+            <button className="btn-contact">Contact Me</button>
         </div>
         <div className="hero-section-model">
             <Earth />
