@@ -390,7 +390,7 @@ p {
   .hero-section-greeting,
   .hero-section-title,
   .hero-section-description {
-    padding-right: 10%; /* Relative padding */
+
     text-align: center;
   }
 
@@ -427,7 +427,7 @@ p {
   }
 
   .about-section-title {
-    font-size: 73px;
+    font-size: 61px;
   }
 
   .about-section-text {
