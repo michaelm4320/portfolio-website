@@ -188,10 +188,6 @@ p {
   gap: 21.333px;
 }
 
-.hero-section-text p {
-  margin: 0;
-}
-
 .hero-section-greeting {
 flex-wrap: wrap; /* Ensures the text wraps as needed */
   color: white;
@@ -552,7 +548,8 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
 }
 
 @media only screen and (max-width: 605px) {
-    .hero-section-greeting {
+    .hero-section-text p {
+        margin-left: 30px;
         gap: 10px;
     }
 }
