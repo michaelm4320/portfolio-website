@@ -16,9 +16,9 @@ test('hero section has title text', async ({ page }) => {
   expect(title).toBe("SoftwareEngineer");
 });
 
-test('hero section has title text', async ({ page }) => {
+test('hero section has title description', async ({ page }) => {
   await page.goto('/'); // Base URL from playwright.config.cjs
-  const title = await page.textContent('.hero-section-title');
+  const description = await page.textContent('.hero-section-description');
 
-  expect(title).toBe("SoftwareEngineer");
+  expect(description).toBe("I design innovative software solutions to solve real-world challenges.");
 });
