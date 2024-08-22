@@ -120,7 +120,7 @@ p {
   text-decoration: none;
 }
 
-.navbar--content {
+.navbar-content {
   color: var(--darkblue);
   font-size: 16px;
   font-style: normal;
@@ -128,7 +128,7 @@ p {
   line-height: 24px;
   cursor: pointer;
 }
-.navbar--active-content {
+.navbar-active-content {
   color: var(--primary);
 }
 

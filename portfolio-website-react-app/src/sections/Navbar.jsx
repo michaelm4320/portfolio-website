@@ -51,13 +51,13 @@ function Navbar() {
                 <li>
                     <Link
                     onClick={closeMenu}
-                    activeClass="navbar--active-content"
+                    activeClass="navbar-active-content"
                     spy={true}
                     smooth={true}
                     offset={-70}
                      duration={500}
                      to="Hero"
-                     className="navbar--content"
+                     className="navbar-content"
                    >
                     Home
                     </Link>
@@ -65,13 +65,13 @@ function Navbar() {
                 <li>
                     <Link
                         onClick={closeMenu}
-                        activeClass="navbar--active-content"
+                        activeClass="navbar-active-content"
                         spy={true}
                         smooth={true}
                         offset={-70}
                         duration={500}
                         to="AboutMe"
-                        className="navbar--content"
+                        className="navbar-content"
                                   >
                                     About Me
                                   </Link>
@@ -84,7 +84,7 @@ function Navbar() {
         </div>
         <Link
                 onClick={closeMenu}
-                activeClass="navbar--active-content"
+                activeClass="navbar-active-content"
                 spy={true}
                 smooth={true}
                 offset={-70}
