@@ -22,3 +22,10 @@ test('hero section has title description', async ({ page }) => {
 
   expect(description).toBe("I design innovative software solutions to solve real-world challenges.");
 });
+
+test('contact button is rendered in the hero section', async ({ page }) => {
+  await page.goto('/'); // Base URL from playwright.config.cjs
+  const contactButton = await page.$('.btn-contact'); // Selector for the contact button
+  expect(contactButton).not.toBeNull();
+  expect(await contactButton.textContent()).toBe('Get in Touch');
+});
