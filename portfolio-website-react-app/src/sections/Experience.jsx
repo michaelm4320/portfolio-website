@@ -1,4 +1,5 @@
 import React from 'react';
+import intevations from '../assets/intevations.png';
 import html from '../assets/html-5.svg';
 /*import javascript from '../assets/javascript.svg';
 import css from '../assets/css3.svg';
@@ -88,10 +89,28 @@ export default function Experience() {
         <div className="experience-details hologram-container">
           <h2 className="experience-title">Experience</h2>
           <div className="experience-item">
-            <h3 className="experience-item-title">Senior Capstone Project</h3>
+            <div className="experience-section-icon">
+                <img src={intevations} alt="intevations logo" />
+            </div>
+            <h2 className="experience-item-title">Front-End Developer</h2>
+            <h3 className="experience-item-company">Intevations LLC</h3>
+            <p className="experience-item-dates">Sept 2022 - May 2023</p>
             <p className="experience-item-description">
-              Worked on a team to develop a full-stack application using React, Node.js, and MySQL.
-              My role involved front-end development, API integration, and database management.
+                <ul>
+                    <li>
+                        Developed a full-stack web application to process and analyze 5000 patient records for capital planners,
+                        assisting them to efficiently identify key trends and make informed decisions
+                    </li>
+                    <li>
+                        Led frontend development to design a dynamic dashboard using HTML, CSS, and JavaScript, displaying
+                        interactive charts of medical patient data generated from a Synthetic Patient Population Simulator
+                    </li>
+                    <li>
+                        Designed backend features in a 4-person team using Jira for project management, implementing user login
+                        and authentication with Python and Flask, and managing patient records storage using MySQL, ensuring
+                        alignment with project requirements through iterative feedback
+                    </li>
+                </ul>
             </p>
           </div>
         </div>

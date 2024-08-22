@@ -371,17 +371,16 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px; /* Add gap between the two sections */
+  gap: 10%; /* Add gap between the two sections */
   padding: 50px 0;
-
 }
 
 .experience-section-content {
   display: flex;
   flex-direction: row;
-  gap: 190px; /* Gap between the tech stack and experience sections */
+  gap: 15%; /* Gap between the tech stack and experience sections */
   width: 90%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -391,16 +390,46 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
 }
 
 .tech-stack-title, .experience-title {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 35px;
+  margin-bottom: 40px;
   text-align: center;
+}
+
+.tech-stack-title::after {
+  content: '';
+  position: absolute;
+  left: 110px;
+  top: 100px;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(0,255,255,0.8) 70%, rgba(0,255,255,0) 100%);
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0,255,255,0.5);
+}
+
+.experience-title::after {
+  content: '';
+  position: absolute;
+  left: 110px;
+  top: 100px;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(0,255,255,0.8) 70%, rgba(0,255,255,0) 100%);
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0,255,255,0.5);
+}
+
+.experience-section-icon {
+    width: 50px;
+    height: auto;
+    align-items: center;
 }
 
 .tech-stack-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Limit to 3 columns */
   grid-template-rows: repeat(4, auto); /* 4 rows */
-  gap: 20px;
+  gap: 50px;
 }
 
 .tech-skill-container {
@@ -410,8 +439,8 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
 }
 
 .tech-stack-item {
@@ -428,12 +457,17 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
 }
 
 .experience-item-title {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.experience-item-company {
   font-size: 20px;
   margin-bottom: 10px;
 }
 
 .experience-item-description {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.5;
 }
 
@@ -575,6 +609,16 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
     background-color: #000000;
     border-radius: 0.625rem;
     transition: all ease-in-out 0.2s;
+   }
+
+   .experience-section-content {
+     display: flex;
+     flex-direction: column;
+     gap: 15%; /* Gap between the tech stack and experience sections */
+     width: 500px;
+     height: auto;
+     max-width: 1400px;
+     margin: 0 auto;
    }
 }
 
