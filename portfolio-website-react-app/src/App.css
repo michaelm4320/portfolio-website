@@ -367,6 +367,91 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
   color: var(--primary);
 }
 
+.experience-section {
+  display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-content: space-between;
+  gap: 50px;
+  padding: 50px 0;
+  background-color: #f5f5f5;
+}
+
+.experience-section-content {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.tech-stack, .experience-details {
+  flex: 1;
+  padding: 20px;
+}
+
+.tech-stack-title, .experience-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.tech-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 20px;
+}
+
+.tech-stack-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.tech-stack-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.experience-item-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.experience-item-description {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Hologram-inspired container */
+.hologram-container {
+  background-color: rgba(0, 220, 255, 0.2); /* Semi-transparent background */
+  padding: 40px;
+  border-radius: 15px;
+  color: var(--black);
+  position: relative;
+  border: 2px solid rgba(0, 255, 255, 0.6); /* Cyan border with transparency */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Glowing shadow */
+  outline: 2px solid rgba(0, 255, 255, 0.2); /* Additional outer glow */
+  animation: hud-glow 2s infinite alternate;
+}
+
+/* Sci-fi glowing animation */
+@keyframes hud-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.4), 0 0 15px rgba(0, 255, 255, 0.3);
+    outline: 2px solid rgba(0, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.7), 0 0 40px rgba(0, 255, 255, 0.6);
+    outline: 2px solid rgba(0, 255, 255, 0.5);
+  }
+}
+
 
 
 @media only screen and (max-width: 1200px) {

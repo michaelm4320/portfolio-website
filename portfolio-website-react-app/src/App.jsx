@@ -6,6 +6,7 @@ import Navbar from './sections/Navbar';
 import Hero from './sections/Hero';
 import  StarsCanvas from './canvas/StarsCanvas.jsx';
 import AboutMe from "./sections/AboutMe.jsx";
+import Experience from "./sections/Experience.jsx";
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
@@ -18,6 +19,7 @@ function App() {
         <StarsCanvas />
         <Hero />
         <AboutMe />
+        <Experience />
     </>
   );
 }
