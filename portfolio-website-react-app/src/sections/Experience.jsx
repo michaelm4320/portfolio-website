@@ -21,53 +21,65 @@ export default function Experience() {
         <div className="tech-stack hologram-container">
           <h2 className="tech-stack-title">Tech Stack</h2>
           <div className="tech-stack-grid">
-            <div className="tech-stack-item">
-              <img src={html} alt="HTML" className="tech-stack-icon" />
-              <p>HTML</p>
+              <div className="tech-skill-container">
+                <div className="tech-stack-item">
+                  <img src={html} alt="HTML" className="tech-stack-icon" />
+                </div>
+              </div>
+            <div className="tech-skill-container">
+                <div className="tech-stack-item">
+                  <img src={html} alt="JavaScript" className="tech-stack-icon" />
+                </div>
             </div>
-            <div className="tech-stack-item">
-              <img src={html} alt="JavaScript" className="tech-stack-icon" />
-              <p>JavaScript</p>
+            <div className="tech-skill-container">
+                <div className="tech-stack-item">
+                  <img src={html} alt="CSS" className="tech-stack-icon" />
+                </div>
             </div>
-            <div className="tech-stack-item">
-              <img src={html} alt="CSS" className="tech-stack-icon" />
-              <p>CSS</p>
+            <div className="tech-skill-container">
+                <div className="tech-stack-item">
+                  <img src={html} alt="Java" className="tech-stack-icon" />
+                </div>
             </div>
-            <div className="tech-stack-item">
-              <img src={html} alt="Java" className="tech-stack-icon" />
-              <p>Java</p>
+            <div className="tech-skill-container">
+                <div className="tech-stack-item">
+                  <img src={html} alt="C++" className="tech-stack-icon" />
+                </div>
             </div>
-            <div className="tech-stack-item">
-              <img src={html} alt="C++" className="tech-stack-icon" />
-              <p>C++</p>
+            <div className="tech-skill-container">
+                <div className="tech-stack-item">
+                  <img src={html} alt="Python" className="tech-stack-icon" />
+                </div>
             </div>
-            <div className="tech-stack-item">
-              <img src={html} alt="Python" className="tech-stack-icon" />
-              <p>Python</p>
+            <div className="tech-skill-container">
+                <div className="tech-stack-item">
+                  <img src={html} alt="React" className="tech-stack-icon" />
+                </div>
             </div>
-            <div className="tech-stack-item">
-              <img src={html} alt="React" className="tech-stack-icon" />
-              <p>React</p>
+            <div className="tech-skill-container">
+                <div className="tech-stack-item">
+                  <img src={html} alt="Spring Boot" className="tech-stack-icon" />
+                </div>
             </div>
-            <div className="tech-stack-item">
-              <img src={html} alt="Spring Boot" className="tech-stack-icon" />
-              <p>Spring Boot</p>
+            <div className="tech-skill-container">
+                <div className="tech-stack-item">
+                  <img src={html} alt="MySQL" className="tech-stack-icon" />
+                </div>
             </div>
-            <div className="tech-stack-item">
-              <img src={html} alt="MySQL" className="tech-stack-icon" />
-              <p>MySQL</p>
+            <div className="tech-skill-container">
+                <div className="tech-stack-item">
+                  <img src={html} alt="AWS" className="tech-stack-icon" />
+                </div>
             </div>
-            <div className="tech-stack-item">
-              <img src={html} alt="AWS" className="tech-stack-icon" />
-              <p>AWS</p>
+            <div className="tech-skill-container">
+                <div className="tech-stack-item">
+                  <img src={html} alt="Arduino" className="tech-stack-icon" />
+                </div>
             </div>
-            <div className="tech-stack-item">
-              <img src={html} alt="Arduino" className="tech-stack-icon" />
-              <p>Arduino</p>
-            </div>
-            <div className="tech-stack-item">
-              <img src={html} alt="Playwright" className="tech-stack-icon" />
-              <p>Playwright</p>
+            <div className="tech-skill-container">
+                <div className="tech-stack-item">
+                  <img src={html} alt="Playwright" className="tech-stack-icon" />
+                </div>
             </div>
           </div>
         </div>

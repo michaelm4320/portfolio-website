@@ -368,21 +368,20 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
 }
 
 .experience-section {
-  display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    align-items: center;
-    justify-content: space-between;
-  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px; /* Add gap between the two sections */
   padding: 50px 0;
-  background-color: #f5f5f5;
+
 }
 
 .experience-section-content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  gap: 190px; /* Gap between the tech stack and experience sections */
   width: 90%;
   max-width: 1200px;
-  flex-wrap: wrap;
   margin: 0 auto;
 }
 
@@ -399,8 +398,20 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
 
 .tech-stack-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* Limit to 3 columns */
+  grid-template-rows: repeat(4, auto); /* 4 rows */
   gap: 20px;
+}
+
+.tech-skill-container {
+  background-color: rgba(0, 220, 255, 0.6); /* Semi-transparent background */
+  padding: 5px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
 }
 
 .tech-stack-item {
@@ -413,8 +424,7 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
 
 .tech-stack-icon {
   width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
+  height: auto;
 }
 
 .experience-item-title {
@@ -432,13 +442,14 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
   background-color: rgba(0, 220, 255, 0.2); /* Semi-transparent background */
   padding: 40px;
   border-radius: 15px;
-  color: var(--black);
+  color: var(--white);
   position: relative;
   border: 2px solid rgba(0, 255, 255, 0.6); /* Cyan border with transparency */
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Glowing shadow */
   outline: 2px solid rgba(0, 255, 255, 0.2); /* Additional outer glow */
   animation: hud-glow 2s infinite alternate;
 }
+
 
 /* Sci-fi glowing animation */
 @keyframes hud-glow {
