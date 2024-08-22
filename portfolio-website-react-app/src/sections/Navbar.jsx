@@ -50,15 +50,15 @@ function Navbar() {
             <ul>
                 <li>
                     <Link
-                    onClick={closeMenu}
-                    activeClass="navbar-active-content"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                     duration={500}
-                     to="Hero"
-                     className="navbar-content"
-                   >
+                        onClick={closeMenu}
+                        activeClass="navbar-active-content"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                        to="heroSection"
+                        className="navbar-content"
+                    >
                     Home
                     </Link>
                 </li>
@@ -70,16 +70,54 @@ function Navbar() {
                         smooth={true}
                         offset={-70}
                         duration={500}
-                        to="AboutMe"
+                        to="aboutSection"
                         className="navbar-content"
-                                  >
-                                    About Me
-                                  </Link>
-                               </li>
-                <li>Experience</li>
-                <li>Portfolio</li>
-                <li>Testimonials</li>
-                <li>Resume</li>
+                    >
+                        About Me
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        onClick={closeMenu}
+                        activeClass="navbar-active-content"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                        to="Experience"
+                        className="navbar-content"
+                    >
+                        Experience
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        onClick={closeMenu}
+                        activeClass="navbar-active-content"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                        to="Portfolio"
+                        className="navbar-content"
+                    >
+                        Portfolio
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        onClick={closeMenu}
+                        activeClass="navbar-active-content"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                        to="Testimonials"
+                        className="navbar-content"
+                    >
+                        Testimonials
+                    </Link>
+                </li>
             </ul>
         </div>
         <Link
