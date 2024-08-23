@@ -499,7 +499,34 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
   }
 }
 
+.tech-skill-container:hover {
+  transform: scale(1.2); /* Enlarge on hover */
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8); /* Glowing effect */
+}
 
+.tooltip {
+  visibility: hidden;
+  width: 110px;
+  background-color: rgba(0, 255, 255, 0.8); /* Light cyan background */
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 14px;
+  white-space: nowrap; /* Prevent tooltip text from wrapping */
+  z-index: 10;
+}
+
+.tech-skill-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
 
 @media only screen and (max-width: 1200px) {
   .btn-outline-primary {
