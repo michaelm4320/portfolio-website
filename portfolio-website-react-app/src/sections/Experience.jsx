@@ -11,7 +11,7 @@ import springboot from '../assets/spring-icon.svg';
 import mysql from '../assets/mysql.svg';
 import aws from '../assets/aws.svg';
 import git from '../assets/git-icon.svg';
-import playwright from '../assets/playwright.svg';
+import nodejs from '../assets/nodejs-icon.svg';
 
 export default function Experience() {
   return (
@@ -79,7 +79,7 @@ export default function Experience() {
             </div>
             <div className="tech-skill-container">
                 <div className="tech-stack-item">
-                  <img src={playwright} alt="Playwright" className="tech-stack-icon" />
+                  <img src={nodejs} alt="Playwright" className="tech-stack-icon" />
                 </div>
             </div>
           </div>
