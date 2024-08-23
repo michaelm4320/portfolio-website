@@ -84,7 +84,7 @@ function Navbar() {
                         smooth={true}
                         offset={-70}
                         duration={500}
-                        to="Experience"
+                        to="experienceSection"
                         className="navbar-content"
                     >
                         Experience
