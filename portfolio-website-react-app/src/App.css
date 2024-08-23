@@ -439,7 +439,7 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 110px;
+  width: 100px;
   height: 110px;
 }
 
@@ -615,11 +615,36 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
      display: flex;
      flex-direction: column;
      gap: 15%; /* Gap between the tech stack and experience sections */
-     width: 500px;
+     width: 100%;
      height: auto;
      max-width: 1400px;
      margin: 0 auto;
    }
+
+   .tech-stack-grid {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr); /* Limit to 3 columns */
+     grid-template-rows: repeat(4, auto); /* 4 rows */
+     gap: 10px;
+            transform: translateX(4%);
+   }
+
+   .tech-skill-container {
+     padding: 5px;
+     border-radius: 100%;
+     width: 70px;
+     height: 70px;
+   }
+   .tech-stack-icon {
+     width: 35px;
+     height: auto;
+   }
+
+     .tech-stack-title::after,
+     .experience-title::after {
+       left: 50%;
+       transform: translateX(-50%);
+     }
 }
 
     @media screen and (max-width: 1200px) {
@@ -692,4 +717,77 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
         margin-left: 30px;
         gap: 10px;
     }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .experience-section,
+  .tech-stack-section {
+    flex-direction: column; /* Switch to column layout */
+    padding: 50px 20px; /* Reduce padding */
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-section-content,
+  .tech-stack-section-content {
+    flex: 1 1 100%; /* Full width on smaller screens */
+    padding: 15px; /* Reduce padding */
+  }
+
+  .experience-title,
+  .tech-stack-title {
+    font-size: 36px; /* Adjust the title font size */
+  }
+
+  .experience-description,
+  .tech-stack-description {
+    font-size: 18px; /* Adjust the description font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-section,
+  .tech-stack-section {
+    padding: 30px 1px; /* Further reduce padding */
+  }
+
+  .experience-title,
+  .tech-stack-title {
+    font-size: 28px; /* Smaller title font for mobile */
+  }
+
+  .experience-description,
+  .tech-stack-description {
+    font-size: 16px; /* Smaller description font for mobile */
+  }
+}
+
+@media (max-width: 350px) {
+  .experience-section,
+  .tech-stack-section {
+    padding: 30px 1px; /* Further reduce padding */
+  }
+
+  .experience-title,
+  .tech-stack-title {
+    font-size: 28px; /* Smaller title font for mobile */
+  }
+
+  .experience-description,
+  .tech-stack-description {
+    font-size: 16px; /* Smaller description font for mobile */
+  }
+
+  .tech-stack-icon {
+       width: 30px;
+       height: auto;
+  }
+
+  .tech-skill-container {
+       padding: 5px;
+       border-radius: 100%;
+       width: 55px;
+       height: 55px;
+  }
 }
