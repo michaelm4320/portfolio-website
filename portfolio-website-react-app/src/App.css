@@ -637,6 +637,27 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
   line-height: 24px;
 }
 
+.section--heading {
+    color: white;
+    font-size: 61px;
+    position: relative; /* This allows the ::after element to be positioned relative to the heading */
+    text-align: center; /* This will center your title if that's your intention */
+}
+
+.section--heading::after {
+  content: '';
+  position: absolute;
+  left: 50%; /* Start at the center of the heading */
+  bottom: -5px; /* Position the underline just below the heading */
+  transform: translateX(-50%); /* Center the underline horizontally */
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(0,255,255,0.8) 70%, rgba(0,255,255,0) 100%);
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0,255,255,0.5);
+}
+
+
 @media only screen and (max-width: 1200px) {
   .btn-outline-primary {
     display: none;
@@ -777,6 +798,7 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
      width: 70px;
      height: 70px;
    }
+
    .tech-stack-icon {
      width: 35px;
      height: auto;
@@ -791,6 +813,30 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
 
      .hologram-container {
        padding: 10px;
+     }
+
+     .portfolio--section {
+        position: relative;
+        padding: 15px;
+
+     }
+
+     .portfolio--section--container,
+     .portfolio--container-box {
+         display: flex;
+         flex-direction: column;
+     }
+
+     .portfolio--container {
+         align-items: center;
+     }
+
+     .portfolio--container-box {
+         gap: 30px;
+     }
+
+     .section--heading {
+        font-size: 50px;
      }
 }
 
