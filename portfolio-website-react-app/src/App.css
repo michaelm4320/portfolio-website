@@ -31,7 +31,7 @@ p {
   --primary: #5e3bee;
   --heading-color: #282938;
   --bg-shade: #f5fcff;
-  --github: #e62872;
+  --github: rgb(0, 110, 255);
   --darkblue: #1c1e53;
   --black: #000000;
   --white: #ffffff;
@@ -361,7 +361,7 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
   transition: background-color 0.5s;
   background-color: rgba(0, 110, 255);
   color: var(--white);
-  border: 1px solid var(--primary);
+  border: darkblue;
 }
 
 .btn-contact:hover {
