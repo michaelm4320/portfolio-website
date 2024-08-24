@@ -1,36 +1,10 @@
 {
-  "skills": [
-    {
-      "id": "1",
-      "src": "./img/product-chain-1.png",
-      "title": "Front-End",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique"
-    },
-    {
-      "id": "2",
-      "src": "./img/tag-1.png",
-      "title": "Back-End",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique"
-    },
-    {
-      "id": "3",
-      "src": "./img/feather-pen-2.png",
-      "title": "UI & UX Design",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique"
-    },
-    {
-      "id": "4",
-      "src": "./img/feather-pen-1.png",
-      "title": "Webflow Development",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique"
-    }
-  ],
   "portfolio": [
     {
       "id": "1",
       "src": "src/assets/placeholder-image-1.png",
       "title": "AI-Enhanced File Management Tool",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
+      "description": "A Java-based web scraper and file management tool with GPT-3.5-turbo AI integration, capable of extracting web data and allowing users to load, view, edit, and delete text files.",
       "link": "View In Github",
       "githubUrl": "https://github.com/michaelm4320/WebScraper"
     },
@@ -38,7 +12,7 @@
       "id": "2",
       "src": "src/assets/placeholder-image-1.png",
       "title": "Portfolio Website",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
+      "description": "A personal portfolio website with stunning 3D visuals, showcasing my experience, projects, testimonials, and a contact form, built using modern web technologies for a professional and responsive design.",
       "link": "View In Github",
       "githubUrl": "https://github.com/michaelm4320/portfolio-website"
     },
@@ -46,7 +20,7 @@
       "id": "3",
       "src": "src/assets/placeholder-image-1.png",
       "title": "Healthcare Investment Tool",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
+      "description": "Developed a full-stack web application that processes and analyzes patient records, featuring a dynamic dashboard, user authentication, and interactive data visualization for informed decision-making in healthcare investments.",
       "link": "View In Github",
       "githubUrl": "https://github.com/michaelm4320/Healthcare_Investment_Tool"
     }
