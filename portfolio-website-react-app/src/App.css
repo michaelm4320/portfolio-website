@@ -529,40 +529,40 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
 }
 
 /* My Portfolio Starts */
-.portfolio--section {
+.portfolio-section {
   display: flex;
   padding: 112px 85px;
   flex-direction: column;
   align-items: flex-start;
   gap: 80px;
 }
-.portfolio--container-box {
+.portfolio-container-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-.portfolio--container {
+.portfolio-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 21.3px;
 }
-.portfolio--section--container {
+.portfolio-section--container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 42.6px;
   width: 100%;
 }
-.portfolio--section--img {
+.portfolio-section--img {
   border-radius: 8px;
   width: 100%;
 }
-.portfolio--section--img > img {
+.portfolio-section--img > img {
   width: 100%;
 }
-.portfolio--section--card {
+.portfolio-section-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -574,7 +574,7 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
-.portfolio--section--card--content {
+.portfolio-section-card--content {
   display: flex;
   padding: 32px;
   flex-direction: column;
@@ -582,10 +582,10 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
   gap: 32px;
   align-self: stretch;
 }
-.portfolio--section--title {
+.portfolio-section--title {
   color: white;
 }
-.portfolio--link {
+.portfolio-link {
   text-decoration: none;
   display: flex;
   gap: 16px;
@@ -593,7 +593,7 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
   padding-bottom: 10.6px;
   font-weight: 600;
 }
-.portfolio--section--card:hover path {
+.portfolio-section-card:hover path {
   stroke: #006b6a;
 }
 
@@ -815,23 +815,23 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
        padding: 10px;
      }
 
-     .portfolio--section {
+     .portfolio-section {
         position: relative;
         padding: 15px;
 
      }
 
-     .portfolio--section--container,
-     .portfolio--container-box {
+     .portfolio-section--container,
+     .portfolio-container-box {
          display: flex;
          flex-direction: column;
      }
 
-     .portfolio--container {
+     .portfolio-container {
          align-items: center;
      }
 
-     .portfolio--container-box {
+     .portfolio-container-box {
          gap: 30px;
      }
 
