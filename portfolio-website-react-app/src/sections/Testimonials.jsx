@@ -18,6 +18,11 @@ export default function Testimonials() {
               <div className="testimonial-author">
                 <p className="author-name">{item.author_name}</p>
                 <p className="author-designation">{item.author_designation}</p>
+                {item.linkedin && (
+                  <a href={item.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                    LinkedIn Profile
+                  </a>
+                )}
               </div>
             </div>
           </div>
