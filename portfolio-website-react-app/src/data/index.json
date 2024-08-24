@@ -29,23 +29,26 @@
     {
       "id": "1",
       "src": "src/assets/placeholder-image-1.png",
-      "title": "Ahuse",
+      "title": "AI-Enhanced File Management Tool",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
-      "link": "View In Github"
+      "link": "View In Github",
+      "githubUrl": "https://github.com/michaelm4320/WebScraper"
     },
     {
       "id": "2",
       "src": "src/assets/placeholder-image-1.png",
-      "title": "App Dashboard",
+      "title": "Portfolio Website",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
-      "link": "View In Github"
+      "link": "View In Github",
+      "githubUrl": "https://github.com/michaelm4320/portfolio-website"
     },
     {
       "id": "3",
       "src": "src/assets/placeholder-image-1.png",
-      "title": "Easy Rentn",
+      "title": "Healthcare Investment Tool",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
-      "link": "View In Github"
+      "link": "View In Github",
+      "githubUrl": "https://github.com/michaelm4320/Healthcare_Investment_Tool"
     }
   ],
   "testimonial": [

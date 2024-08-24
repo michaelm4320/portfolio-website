@@ -589,7 +589,7 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
   text-decoration: none;
   display: flex;
   gap: 16px;
-  border-bottom: 1.33px solid var(--primary);
+  border-bottom: 1.33px solid white;
   padding-bottom: 10.6px;
   font-weight: 600;
 }
