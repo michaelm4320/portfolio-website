@@ -31,7 +31,7 @@ test.describe('Navbar Component', () => {
       'About Me',
       'Experience',
       'Portfolio',
-      'Testimonials'
+      'Endorsements'
     ]);
   });
 
