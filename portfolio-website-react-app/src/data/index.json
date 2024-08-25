@@ -33,7 +33,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
       "author_name": "Dianne Russel",
       "author_designation": "Starbucks",
-      "linkedin": "https://www.linkedin.com/in/dianne-russel"
+      "linkedin": "https://www.linkedin.com/in/kayloleon/"
     },
     {
       "id": "2",
@@ -42,7 +42,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
       "author_name": "Kristin Watson",
       "author_designation": "Louis Vuitton",
-      "linkedin": "https://www.linkedin.com/in/kristin-watson"
+      "linkedin": "https://www.linkedin.com/in/kayloleon/"
     },
     {
       "id": "3",
@@ -50,8 +50,8 @@
       "src": "src/assets/kaylo.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
       "author_name": "Kathryn Murphy",
-      "author_designation": "McDonald's",
-      "linkedin": "https://www.linkedin.com/in/kathryn-murphy"
+      "author_designation": "McDonalds",
+      "linkedin": "https://www.linkedin.com/in/kayloleon/"
     }
   ]
 }

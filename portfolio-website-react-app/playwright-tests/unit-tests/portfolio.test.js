@@ -6,9 +6,9 @@ test.describe('Portfolio Section', () => {
     await page.goto('/'); // Adjust based on your routing
   });
 
-  test('displays the My Portfolio title', async ({ page }) => {
+  test('displays the Portfolio title', async ({ page }) => {
     const portfolioTitle = await page.textContent('.section--heading');
-    expect(portfolioTitle).toBe("My Portfolio");
+    expect(portfolioTitle).toBe("Portfolio");
   });
 
   test('has the correct number of portfolio items', async ({ page }) => {

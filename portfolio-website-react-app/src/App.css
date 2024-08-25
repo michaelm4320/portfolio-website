@@ -966,7 +966,7 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
      }
 
        .testimonials-title {
-         font-size: 50px;
+         font-size: 40px;
          margin-top: 25px;
          margin-left: 10px;
          text-align: center;
@@ -974,7 +974,7 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
 
        .testimonials-title::after {
          left: 50%; /* Center the underline relative to the heading */
-         width: 300px; /* Make sure the width scales appropriately */
+         width: 276px; /* Make sure the width scales appropriately */
          transform: translateX(-50%); /* Center the underline horizontally */
        }
 }
