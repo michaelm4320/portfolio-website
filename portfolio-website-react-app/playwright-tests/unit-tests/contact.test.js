@@ -46,7 +46,5 @@ test.describe('Contact Form', () => {
         expect(messageText).toContain('"message":"This is a test message."');
       }
     });
-
-    // Optionally, you could add more checks here based on what happens after form submission
   });
 });

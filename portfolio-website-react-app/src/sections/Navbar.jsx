@@ -98,7 +98,7 @@ function Navbar() {
                         smooth={true}
                         offset={-70}
                         duration={500}
-                        to="Portfolio"
+                        to="MyPortfolio"
                         className="navbar-content"
                     >
                         Portfolio
@@ -112,7 +112,7 @@ function Navbar() {
                         smooth={true}
                         offset={-70}
                         duration={500}
-                        to="Endorsements"
+                        to="Testimonials"
                         className="navbar-content"
                     >
                         Endorsements
@@ -127,7 +127,7 @@ function Navbar() {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                to="Contact"
+                to="MyContact"
                 className="btn btn-outline-primary"
               >
                 Contact Me

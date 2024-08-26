@@ -751,7 +751,6 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
   justify-content: center;
   align-items: center;
   height: 100vh;
-
 }
 
 .container {
@@ -768,6 +767,7 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
 .contact-form {
   display: flex;
   flex-direction: column;
+  padding-bottom: 10px;
 }
 
 .form-group {
