@@ -820,6 +820,21 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
 .contact-title {
     color: white;
     font-size: 40px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.contact-title::after {
+  content: '';
+  position: absolute;
+  left: 112px; /* Start at the center of the heading */
+  bottom: 0px; /* Position the underline just below the heading */
+  transform: translateX(-50%); /* Center the underline horizontally */
+  width: 222px;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(0,255,255,0.8) 70%, rgba(0,255,255,0) 100%);
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0,255,255,0.5);
 }
 
 label {
