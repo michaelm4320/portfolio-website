@@ -47,7 +47,7 @@ test.describe('Navbar Component', () => {
   });
 
   test('has Contact Me button', async ({ page }) => {
-    const contactButton = await page.locator('text=Contact Me');
+    const contactButton = await page.locator('//*[@id="root"]/nav/a[2]');
     expect(await contactButton.isVisible()).toBe(true);
   });
 });
