@@ -522,7 +522,7 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
   padding: 112px 85px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 80px;
+  gap: 20px;
 }
 .portfolio-container-box {
   display: flex;
@@ -554,7 +554,7 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 32px;
+  gap: 20px;
   flex: 1 0 0;
   background-color: rgba(0, 220, 255, 0.7);
   box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.15);
@@ -564,7 +564,7 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
 }
 .portfolio-section-card--content {
   display: flex;
-  padding: 32px;
+  padding: 20px;
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
@@ -745,6 +745,78 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
 .linkedin-link:hover {
   text-decoration: underline; /* Underline on hover */
 }
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+.container {
+  background-color: rgba(0, 220, 255, 0.2);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  border: 2px solid rgba(0, 255, 255, 0.6);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.contact-title {
+    color: white;
+    font-size: 40px;
+}
+
+label {
+    color: white;
+}
+
 
 @media only screen and (max-width: 1200px) {
   .btn-outline-primary {

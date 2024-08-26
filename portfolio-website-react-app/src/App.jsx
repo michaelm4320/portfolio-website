@@ -9,6 +9,7 @@ import AboutMe from "./sections/AboutMe.jsx";
 import Experience from "./sections/Experience.jsx";
 import Portfolio from "./sections/Portfolio.jsx";
 import Testimonials from "./sections/Testimonials.jsx";
+import Contact from "./sections/Contact.jsx";
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
@@ -24,6 +25,7 @@ function App() {
         <Experience />
         <Portfolio />
         <Testimonials />
+        <Contact />
     </>
   );
 }
