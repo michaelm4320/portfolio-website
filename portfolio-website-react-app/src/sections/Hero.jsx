@@ -31,11 +31,11 @@ export default function Hero() {
             real-world challenges.
           </p>
         </div>
-        <button className="btn-contact" onClick={scrollToContact}>
+        <button className="btn-contact" onClick={scrollToContact} aria-label="Navigate to Contact Me section">
           Get in Touch
         </button>
       </div>
-      <div className="hero-section-model">
+      <div className="hero-section-model" aria-label="Interactive 3D Earth model">
         <Earth />
       </div>
     </section>
