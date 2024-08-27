@@ -23,7 +23,7 @@ test.describe('Endorsements Section', () => {
     const linkedinLink = await page.locator('.linkedin-link').first();
 
     expect(await quoteText.textContent()).toContain("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique");
-    expect(await authorName.textContent()).toBe("Dianne Russel");
+    expect(await authorName.textContent()).toBe("Kaylo Leon");
     expect(await authorDesignation.textContent()).toBe("Starbucks");
     expect(await linkedinLink.getAttribute('href')).toBe("https://www.linkedin.com/in/kayloleon/");
   });
@@ -35,7 +35,7 @@ test.describe('Endorsements Section', () => {
     const linkedinLink = await page.locator('.linkedin-link').nth(1);
 
     expect(await quoteText.textContent()).toContain("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique");
-    expect(await authorName.textContent()).toBe("Kristin Watson");
+    expect(await authorName.textContent()).toBe("Govinda Ramrattan");
     expect(await authorDesignation.textContent()).toBe("Louis Vuitton");
     expect(await linkedinLink.getAttribute('href')).toBe("https://www.linkedin.com/in/kayloleon/");
   });

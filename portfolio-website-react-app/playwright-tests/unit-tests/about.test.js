@@ -23,5 +23,5 @@ test('about me section has an image', async ({ page }) => {
   expect(image).not.toBeNull(); // Ensure the image element is present
 
   const imageAlt = await image.getAttribute('alt');
-  expect(imageAlt).toBe("about Section"); // Check the alt text for the image
+  expect(imageAlt).toBe("Picture of Michael"); // Check the alt text for the image
 });
