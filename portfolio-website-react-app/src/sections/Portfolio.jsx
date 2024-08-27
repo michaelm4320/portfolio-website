@@ -49,7 +49,7 @@ export default function MyPortfolio() {
         {data?.portfolio?.map((item, index) => (
           <div key={index} className="portfolio-section-card">
             <div className="portfolio-section--img">
-              <img src={item.src} alt="Placeholder" />
+              <img src={item.src} alt={item.alt} />
             </div>
             <div className="portfolio-section-card--content">
               <div>
@@ -57,7 +57,7 @@ export default function MyPortfolio() {
                 <p className="text-md">{item.description}</p>
               </div>
               <p className="text-sm portfolio-link">
-                <a href={item.githubUrl} target="_blank" rel="noopener noreferrer">
+                <a href={item.githubUrl} target="_blank" rel="noopener noreferrer" aria-label={item.link}>
                   {item.link}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -65,6 +65,7 @@ export default function MyPortfolio() {
                     height="16"
                     viewBox="0 0 20 19"
                     fill="none"
+                    aria-label="arrow link to github project"
                   >
                     <path
                       d="M4.66667 1.66675H18V15.0001M18 1.66675L2 17.6667L18 1.66675Z"

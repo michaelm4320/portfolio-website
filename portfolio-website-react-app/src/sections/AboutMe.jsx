@@ -8,7 +8,7 @@ export default function AboutMe() {
       <section id="aboutSection" className="about-section">
         <div className="about-section-content">
             <div className="about-section-img">
-                <img src={testImg} alt="about Section" />
+                <img src={testImg} alt="Picture of Michael" />
             </div>
             <div className="about-section-box">
                 <div className="about-section-text">

@@ -19,7 +19,7 @@ export default function Testimonials() {
                 <p className="author-name">{item.author_name}</p>
                 <p className="author-designation">{item.author_designation}</p>
                 {item.linkedin && (
-                  <a href={item.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                  <a href={item.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin-link" aria-label={item.aria}>
                     LinkedIn Profile
                   </a>
                 )}

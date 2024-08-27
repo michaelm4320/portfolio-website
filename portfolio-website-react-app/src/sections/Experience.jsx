@@ -53,7 +53,7 @@ export default function Experience() {
           <h2 className="experience-title">Experience</h2>
           <div className="experience-item">
             <div className="experience-section-icon">
-              <img src={intevations} alt="intevations logo" />
+              <img src={intevations} alt="intevations company logo" />
             </div>
             <h2 className="experience-item-title">Front-End Developer</h2>
             <h3 className="experience-item-company">Intevations LLC</h3>
