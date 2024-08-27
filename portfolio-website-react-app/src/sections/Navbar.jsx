@@ -34,13 +34,16 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className={'nav-section ${navActive ? "active" : ""}'}>
+    <nav className={'nav-section ${navActive ? "active" : ""}'} aria-label="Main Navigation">
         <div className="nav-section-icon">
-            <img src={logo} alt="logo Section" />
+            <img src={logo} alt="Michaels logo Section" />
         </div>
         <a
             className={`nav__hamburger ${navActive ? "active" : ""}`}
             onClick={toggleNav}
+            aria-label="Toggle navigation menu"
+            aria-expanded={navActive}
+            aria-controls="navbar-menu"
         >
             <span className="nav__hamburger__line"></span>
             <span className="nav__hamburger__line"></span>
@@ -58,6 +61,7 @@ function Navbar() {
                         duration={500}
                         to="heroSection"
                         className="navbar-content"
+                        aria-label="Navigate to Home Section"
                     >
                     Home
                     </Link>
@@ -72,6 +76,7 @@ function Navbar() {
                         duration={500}
                         to="aboutSection"
                         className="navbar-content"
+                        aria-label="Navigate to About Me Section"
                     >
                         About Me
                     </Link>
@@ -86,6 +91,7 @@ function Navbar() {
                         duration={500}
                         to="experienceSection"
                         className="navbar-content"
+                        aria-label="Navigate to Experience Section"
                     >
                         Experience
                     </Link>
@@ -100,6 +106,7 @@ function Navbar() {
                         duration={500}
                         to="MyPortfolio"
                         className="navbar-content"
+                        aria-label="Navigate to Portfolio Section"
                     >
                         Portfolio
                     </Link>
@@ -114,6 +121,7 @@ function Navbar() {
                         duration={500}
                         to="Testimonials"
                         className="navbar-content"
+                        aria-label="Navigate to Endorsements Section"
                     >
                         Endorsements
                     </Link>
@@ -129,6 +137,7 @@ function Navbar() {
                 duration={500}
                 to="MyContact"
                 className="btn btn-outline-primary"
+                aria-label="Navigate to Contact Me Section"
               >
                 Contact Me
         </Link>
