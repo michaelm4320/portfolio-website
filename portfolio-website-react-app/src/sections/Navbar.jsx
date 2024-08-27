@@ -13,6 +13,13 @@ function Navbar() {
     setNavActive(false);
   };
 
+  const handleKeyDown = (event, action) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault(); // Prevent default spacebar scroll
+        action(); // Trigger the action
+      }
+  };
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 500) {
@@ -44,6 +51,8 @@ function Navbar() {
             aria-label="Toggle navigation menu"
             aria-expanded={navActive}
             aria-controls="navbar-menu"
+            onKeyDown={(e) => handleKeyDown(e, toggleNav)}
+            tabIndex="0"
         >
             <span className="nav__hamburger__line"></span>
             <span className="nav__hamburger__line"></span>
@@ -54,6 +63,13 @@ function Navbar() {
                 <li>
                     <Link
                         onClick={closeMenu}
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault(); // Prevent any default behavior
+                                closeMenu(); // Trigger your closeMenu function
+                                document.getElementById('heroSection').scrollIntoView({ behavior: 'smooth' }); // Scroll to the section manually
+                            }
+                        }}
                         activeClass="navbar-active-content"
                         spy={true}
                         smooth={true}
@@ -62,13 +78,21 @@ function Navbar() {
                         to="heroSection"
                         className="navbar-content"
                         aria-label="Navigate to Home Section"
+                        tabIndex="0" /* Ensure tab order */
                     >
-                    Home
+                        Home
                     </Link>
                 </li>
                 <li>
                     <Link
                         onClick={closeMenu}
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault(); // Prevent any default behavior
+                                closeMenu(); // Trigger your closeMenu function
+                                document.getElementById('aboutSection').scrollIntoView({ behavior: 'smooth' }); // Scroll to the section manually
+                            }
+                        }}
                         activeClass="navbar-active-content"
                         spy={true}
                         smooth={true}
@@ -76,7 +100,8 @@ function Navbar() {
                         duration={500}
                         to="aboutSection"
                         className="navbar-content"
-                        aria-label="Navigate to About Me Section"
+                        aria-label="Navigate to About Section"
+                        tabIndex="0" /* Ensure tab order */
                     >
                         About Me
                     </Link>
@@ -84,6 +109,13 @@ function Navbar() {
                 <li>
                     <Link
                         onClick={closeMenu}
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault(); // Prevent any default behavior
+                                closeMenu(); // Trigger your closeMenu function
+                                document.getElementById('experienceSection').scrollIntoView({ behavior: 'smooth' }); // Scroll to the section manually
+                            }
+                        }}
                         activeClass="navbar-active-content"
                         spy={true}
                         smooth={true}
@@ -92,13 +124,22 @@ function Navbar() {
                         to="experienceSection"
                         className="navbar-content"
                         aria-label="Navigate to Experience Section"
+                        tabIndex="0" /* Ensure tab order */
                     >
                         Experience
                     </Link>
+
                 </li>
                 <li>
                     <Link
                         onClick={closeMenu}
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault(); // Prevent any default behavior
+                                closeMenu(); // Trigger your closeMenu function
+                                document.getElementById('MyPortfolio').scrollIntoView({ behavior: 'smooth' }); // Scroll to the section manually
+                            }
+                        }}
                         activeClass="navbar-active-content"
                         spy={true}
                         smooth={true}
@@ -107,13 +148,22 @@ function Navbar() {
                         to="MyPortfolio"
                         className="navbar-content"
                         aria-label="Navigate to Portfolio Section"
+                        tabIndex="0" /* Ensure tab order */
                     >
                         Portfolio
                     </Link>
+
                 </li>
                 <li>
                     <Link
                         onClick={closeMenu}
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault(); // Prevent any default behavior
+                                closeMenu(); // Trigger your closeMenu function
+                                document.getElementById('Testimonials').scrollIntoView({ behavior: 'smooth' }); // Scroll to the section manually
+                            }
+                        }}
                         activeClass="navbar-active-content"
                         spy={true}
                         smooth={true}
@@ -121,26 +171,37 @@ function Navbar() {
                         duration={500}
                         to="Testimonials"
                         className="navbar-content"
-                        aria-label="Navigate to Endorsements Section"
+                        aria-label="Navigate to endorsements Section"
+                        tabIndex="0" /* Ensure tab order */
                     >
                         Endorsements
                     </Link>
+
                 </li>
             </ul>
         </div>
         <Link
-                onClick={closeMenu}
-                activeClass="navbar-active-content"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                to="MyContact"
-                className="btn btn-outline-primary"
-                aria-label="Navigate to Contact Me Section"
-              >
-                Contact Me
+            onClick={closeMenu}
+            onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault(); // Prevent any default behavior
+                    closeMenu(); // Trigger your closeMenu function
+                    document.getElementById('MyContact').scrollIntoView({ behavior: 'smooth' }); // Scroll to the section manually
+                }
+            }}
+            activeClass="navbar-active-content"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            to="MyContact"
+            className="btn btn-outline-primary"
+            aria-label="Navigate to Contact Section"
+            tabIndex="0" /* Ensure tab order */
+        >
+            Contact Me
         </Link>
+
     </nav>
   );
 }
