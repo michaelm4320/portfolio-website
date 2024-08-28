@@ -1,5 +1,5 @@
 // src/StarsCanvas.jsx
-import { useState, useRef, Suspense } from "react";
+import { useState, useRef, useEffect, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
@@ -7,11 +7,26 @@ import * as random from "maath/random/dist/maath-random.esm";
 const Stars = (props) => {
   const ref = useRef();
   const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 1.2 }));
+  const [paused, setPaused] = useState(false);
 
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 10;
-    ref.current.rotation.y -= delta / 15;
+    if (!paused) {
+      ref.current.rotation.x -= delta / 10;
+      ref.current.rotation.y -= delta / 15;
+    }
   });
+
+  useEffect(() => {
+    const handlePause = () => {
+      setPaused((prev) => !prev);
+    };
+
+    window.addEventListener('animationpause', handlePause);
+
+    return () => {
+      window.removeEventListener('animationpause', handlePause);
+    };
+  }, []);
 
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
@@ -44,8 +59,8 @@ const StarsCanvas = () => {
       }}
     >
       <Canvas
-          camera={{ position: [0, 0, 1] }}
-          gl={{ alpha: true }}
+        camera={{ position: [0, 0, 1] }}
+        gl={{ alpha: true }}
       >
         <Suspense fallback={null}>
           <Stars />

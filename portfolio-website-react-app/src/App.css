@@ -64,6 +64,14 @@ p {
   overflow: hidden; /* Ensure model is contained within this area */
 }
 
+.animations-paused .hologram-container,
+.animations-paused .about-section-img,
+.animations-paused .testimonial-card,
+.animations-paused .container {
+  animation-play-state: paused !important; /* Pause animations */
+}
+
+
 .btn {
   font-family: "Roboto";
   display: inline-block;

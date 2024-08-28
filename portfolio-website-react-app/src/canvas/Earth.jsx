@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import * as THREE from 'three';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, useTexture } from '@react-three/drei';
@@ -7,6 +7,7 @@ import { getFresnelMat } from './getFresnelMat.jsx'; // Ensure this file is corr
 const EarthModel = () => {
   const groupRef = useRef();
   const { scene } = useThree();
+  const [animationsPaused, setAnimationsPaused] = useState(false);
 
   // Textures (replace these with your own or placeholders)
   const [earthMap, specularMap, bumpMap, lightsMap, cloudsMap, alphaMap] = useTexture([
@@ -25,8 +26,23 @@ const EarthModel = () => {
     return () => scene.remove(sunLight);
   }, [scene]);
 
+  useEffect(() => {
+    const handleAnimationPause = () => {
+      setAnimationsPaused(document.body.classList.contains('animations-paused'));
+    };
+
+    handleAnimationPause(); // Initialize state
+    window.addEventListener('animationpause', handleAnimationPause);
+
+    return () => {
+      window.removeEventListener('animationpause', handleAnimationPause);
+    };
+  }, []);
+
   useFrame(() => {
-    groupRef.current.rotation.y += 0.002;
+    if (!animationsPaused) {
+      groupRef.current.rotation.y += 0.002;
+    }
   });
 
   const geometry = new THREE.IcosahedronGeometry(1, 12);

@@ -31,7 +31,8 @@ test.describe('Navbar Component', () => {
       'About Me',
       'Experience',
       'Portfolio',
-      'Endorsements'
+      'Endorsements',
+      'Contact'
     ]);
   });
 
@@ -46,8 +47,8 @@ test.describe('Navbar Component', () => {
       expect(await aboutLink.isVisible()).toBe(true);
   });
 
-  test('has Contact Me button', async ({ page }) => {
-    const contactButton = await page.locator('//*[@id="root"]/nav/a[2]');
+  test('has Pause/Resume button', async ({ page }) => {
+    const contactButton = await page.locator('//*[@id="animationToggleButton"]');
     expect(await contactButton.isVisible()).toBe(true);
   });
 });
