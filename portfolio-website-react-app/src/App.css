@@ -695,6 +695,9 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
 }
 
 .testimonial-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   background-color: rgba(0, 220, 255, 0.2);
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for card */
