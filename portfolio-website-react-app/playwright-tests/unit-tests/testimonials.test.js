@@ -22,7 +22,7 @@ test.describe('Endorsements Section', () => {
     const authorDesignation = await page.locator('.author-designation').first();
     const linkedinLink = await page.locator('.linkedin-link').first();
 
-    expect(await quoteText.textContent()).toContain("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique");
+    expect(await quoteText.textContent()).toContain("I thoroughly enjoyed working closely with Michael on several projects at FGCU. His positive approach and readiness to go the extra mile were evident in every task. His dedication to constant improvement and collaborative spirit make him a valuable asset to any team. I highly recommend Michael for any opportunity he pursues.");
     expect(await authorName.textContent()).toBe("Kaylo Leon");
     expect(await authorDesignation.textContent()).toBe("Starbucks");
     expect(await linkedinLink.getAttribute('href')).toBe("https://www.linkedin.com/in/kayloleon/");
@@ -34,7 +34,7 @@ test.describe('Endorsements Section', () => {
     const authorDesignation = await page.locator('.author-designation').nth(1);
     const linkedinLink = await page.locator('.linkedin-link').nth(1);
 
-    expect(await quoteText.textContent()).toContain("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique");
+    expect(await quoteText.textContent()).toContain("I worked with Michael on our senior project at FGCU. He was great to work with and was always enthusiastic for opportunities to learn. Even now, he is constantly growing, self-driven and open-minded.");
     expect(await authorName.textContent()).toBe("Govinda Ramrattan");
     expect(await authorDesignation.textContent()).toBe("Louis Vuitton");
     expect(await linkedinLink.getAttribute('href')).toBe("https://www.linkedin.com/in/kayloleon/");

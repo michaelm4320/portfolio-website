@@ -7,7 +7,7 @@ test.describe('Navbar Component', () => {
   });
 
   test('displays the logo', async ({ page }) => {
-    const logo = await page.locator('img[src*="logo.svg"]'); // Using a partial match
+    const logo = await page.locator('img[src*="M-iconPortfolio.png"]'); // Using a partial match
     expect(await logo.isVisible()).toBe(true);
   });
 
