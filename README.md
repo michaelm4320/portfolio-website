@@ -19,8 +19,7 @@ responsive single-page application.
 * About Me
 * Experience
 * Portfolio
-* Testimonials
-* Resume
+* Endorsements
 * Contact Me
 
 ## Tech Stack
@@ -38,7 +37,7 @@ Clone the repository and install dependencies:
 - npm install
 - npm run dev
 
-#### CI/CD Pipeline
+## CI/CD Pipeline
 
 1. **Backend Build and Test**
     - **Environment**: `ubuntu-latest`
@@ -55,7 +54,6 @@ Clone the repository and install dependencies:
         - **Set up Node.js**: Uses the `actions/setup-node@v2` action to set up Node.js version 16.
         - **Install Dependencies and Build Frontend**: Runs the `npm install` and `npm run build` commands in
           the `portfolio-website-react-app` directory.
-        - **Run Unit Tests with Vitest**: Runs the `npm run test:unit` command to execute unit tests using Vitest.
         - **Start Development Server**: Starts the Vite development server and runs it in the background.
         - **Run End-to-End Tests with Playwright**: Runs the `npm run test:e2e` command to execute end-to-end tests
           using Playwright.
@@ -81,9 +79,7 @@ Here's an overview of the scripts set up for this project:
 
 ### Playwright
 
-**Playwright** is used for unit and end-to-end (e2e) testing. It ensures that the entire application works correctly
-from the
-user's
+**Playwright** is used for unit and end-to-end (e2e) testing.
 
 - **Configuration**:
     - Configuration for Playwright is defined in `playwright.config.cjs`.
