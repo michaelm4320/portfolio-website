@@ -8,7 +8,7 @@ responsive single-page application.
 
 ![img.png](img.png)
 
-![img_1.png](img_1.png)
+![img_2.png](img_2.png)
 
 ## Features
 
@@ -97,3 +97,4 @@ Here's an overview of the scripts set up for this project:
 
 https://www.youtube.com/watch?v=_vOInY6SRVE
 https://www.youtube.com/watch?v=FntV9iEJ0tU&
+https://www.youtube.com/watch?v=ugIUObNHZdo
