@@ -95,6 +95,6 @@ Here's an overview of the scripts set up for this project:
 
 # Tutorials
 
-https://www.youtube.com/watch?v=_vOInY6SRVE
-https://www.youtube.com/watch?v=FntV9iEJ0tU&
-https://www.youtube.com/watch?v=ugIUObNHZdo
+- https://www.youtube.com/watch?v=_vOInY6SRVE
+- https://www.youtube.com/watch?v=FntV9iEJ0tU&
+- https://www.youtube.com/watch?v=ugIUObNHZdo
