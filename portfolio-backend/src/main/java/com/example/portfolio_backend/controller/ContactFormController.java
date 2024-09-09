@@ -24,7 +24,7 @@ public class ContactFormController {
     @Autowired
     private ContactFormSubmissionRepository contactFormSubmissionRepository;
 
-    private final String RECAPTCHA_SECRET_KEY = "6LcN3joqAAAAAPvw81VuYfxcqSo6u7KWcp7M6H3N";
+    private final String RECAPTCHA_SECRET_KEY = "";
     private final String RECAPTCHA_VERIFY_URL = "https://www.google.com/recaptcha/api/siteverify";
 
     @PostMapping
