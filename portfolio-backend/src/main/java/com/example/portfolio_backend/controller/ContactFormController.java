@@ -5,6 +5,8 @@ import com.example.portfolio_backend.model.ContactFormSubmissionEntity;
 import com.example.portfolio_backend.repository.ContactFormSubmissionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
+import org.springframework.validation.BindingResult;
 
 @RestController
 @RequestMapping("/api/contact")
@@ -18,7 +20,11 @@ public class ContactFormController {
     private ContactFormSubmissionRepository contactFormSubmissionRepository;
 
     @PostMapping
-    public String handleContactForm(@RequestBody ContactFormSubmissionEntity submission) {
+    public String handleContactForm(@Valid @RequestBody ContactFormSubmissionEntity submission, BindingResult result) {
+        if (result.hasErrors()) {
+            return "Error: " + result.getAllErrors().get(0).getDefaultMessage();
+        }
+
         // Send an email with the form data
         emailSenderService.sendSimpleEmail("michaelmartinez.inquiries@gmail.com",
                 submission.getSubject(),
