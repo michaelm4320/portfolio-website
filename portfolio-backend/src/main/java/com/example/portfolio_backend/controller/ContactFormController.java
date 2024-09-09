@@ -7,9 +7,12 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
+
+import javax.annotation.PostConstruct;
 
 @RestController
 @RequestMapping("/api/contact")
@@ -24,8 +27,15 @@ public class ContactFormController {
     @Autowired
     private ContactFormSubmissionRepository contactFormSubmissionRepository;
 
-    private final String RECAPTCHA_SECRET_KEY = "";
+    @Value("${recaptcha.secret.key}")
+    private String recaptchaSecretKey;
+
     private final String RECAPTCHA_VERIFY_URL = "https://www.google.com/recaptcha/api/siteverify";
+
+    @PostConstruct
+    public void init() {
+        logger.info("Recaptcha Secret Key: {}", recaptchaSecretKey);
+    }
 
     @PostMapping
     public ResponseEntity<String> handleContactForm(
@@ -62,7 +72,7 @@ public class ContactFormController {
         RestTemplate restTemplate = new RestTemplate();
 
         // Prepare request parameters
-        String url = RECAPTCHA_VERIFY_URL + "?secret=" + RECAPTCHA_SECRET_KEY + "&response=" + recaptchaToken;
+        String url = RECAPTCHA_VERIFY_URL + "?secret=" + recaptchaSecretKey + "&response=" + recaptchaToken;
 
         // Make the request to the reCAPTCHA verification endpoint
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);

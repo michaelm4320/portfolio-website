@@ -1,3 +1,4 @@
+.env
 portfolio-backend/src/main/resources/application.properties
 target/
 !portfolio-backend/.mvn/wrapper/maven-wrapper.jar

@@ -108,7 +108,7 @@ const Contact = () => {
                       ></textarea>
                     </div>
           <ReCAPTCHA
-            sitekey=""
+            sitekey="6LdGkDoqAAAAAIM7o3fOwlAlZZ8szf_1xmcMu79v"
             onChange={handleRecaptcha}
           />
           <button className="btn-contact-send" type="submit">Send</button>
