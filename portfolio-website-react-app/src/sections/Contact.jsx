@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -7,6 +8,8 @@ const Contact = () => {
     subject: '',
     message: '',
   });
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleChange = (e) => {
     setFormData({
@@ -15,33 +18,40 @@ const Contact = () => {
     });
   };
 
+  const handleRecaptcha = (token) => {
+    setRecaptchaToken(token);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (!recaptchaToken) {
+      setSubmitStatus('Please complete the reCAPTCHA');
+      return;
+    }
+
     try {
-      // Send POST request to your backend
+      const formDataToSend = new FormData();
+      Object.keys(formData).forEach(key => {
+        formDataToSend.append(key, formData[key]);
+      });
+      formDataToSend.append('recaptchaToken', recaptchaToken);
+
       const response = await fetch('http://localhost:8080/api/contact', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+        body: formDataToSend,
       });
 
       if (response.ok) {
-        console.log('Form submitted successfully');
-        // Optionally reset the form
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: '',
-        });
+        setSubmitStatus('Form submitted successfully');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setRecaptchaToken(null);
       } else {
-        console.log('Failed to submit form');
+        const errorData = await response.text();
+        setSubmitStatus(`Failed to submit form: ${errorData}`);
       }
     } catch (error) {
-      console.error('Error submitting form:', error);
+      setSubmitStatus(`Error submitting form: ${error.message}`);
     }
   };
 
@@ -51,54 +61,59 @@ const Contact = () => {
         <h2 className="contact-title">Contact Me</h2>
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-group">
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Your name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Your email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="subject">Subject</label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              placeholder="Subject"
-              value={formData.subject}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Your message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-          </div>
+                      <label htmlFor="name">Name</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="email">Email</label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Your email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="subject">Subject</label>
+                      <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="Subject"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="message">Message</label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Your message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                      ></textarea>
+                    </div>
+          <ReCAPTCHA
+            sitekey="6LcN3joqAAAAAHw0GjeAOfOvpX2VQM247TBKfllU"
+            onChange={handleRecaptcha}
+          />
           <button className="btn-contact-send" type="submit">Send</button>
         </form>
+        {submitStatus && <p className="submit-status">{submitStatus}</p>}
       </div>
     </section>
   );
