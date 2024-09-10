@@ -3,6 +3,8 @@ package com.example.portfolio_backend.controller;
 import com.example.portfolio_backend.EmailSenderService;
 import com.example.portfolio_backend.model.ContactFormSubmissionEntity;
 import com.example.portfolio_backend.repository.ContactFormSubmissionRepository;
+import com.example.portfolio_backend.service.RateLimiterService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,6 +29,9 @@ public class ContactFormController {
     @Autowired
     private ContactFormSubmissionRepository contactFormSubmissionRepository;
 
+    @Autowired
+    private RateLimiterService rateLimiterService;
+
     @Value("${recaptcha.secret.key}")
     private String recaptchaSecretKey;
 
@@ -40,10 +45,19 @@ public class ContactFormController {
     @PostMapping
     public ResponseEntity<String> handleContactForm(
             @ModelAttribute ContactFormSubmissionEntity submission,
-            @RequestParam("recaptchaToken") String recaptchaToken) {
+            @RequestParam("recaptchaToken") String recaptchaToken,
+            HttpServletRequest request) {
+
+        String clientId = request.getRemoteAddr();
 
         logger.info("Received contact form submission: {}", submission);
         logger.info("Received reCAPTCHA token: {}", recaptchaToken);
+
+        // Rate limiting
+        if (!rateLimiterService.tryAcquire(clientId)) {
+            logger.warn("Rate limit exceeded for IP: {}", clientId);
+            return ResponseEntity.status(429).body("Too many requests. Please try again later.");
+        }
 
         // Verify reCAPTCHA token
         if (!verifyRecaptcha(recaptchaToken)) {
