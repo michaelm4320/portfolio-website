@@ -11,7 +11,7 @@
     },
     {
       "id": "2",
-      "src": "src/assets/placeholder-image-1.png",
+      "src": "src/assets/PortfolioSite.png",
       "title": "Portfolio Website",
       "description": "A personal portfolio website with stunning 3D visuals, showcasing my experience, projects, testimonials, and a contact form, built using modern web technologies for a professional and responsive design.",
       "link": "View In Github",
@@ -35,7 +35,7 @@
       "src": "src/assets/kaylo.png",
       "description": "I thoroughly enjoyed working closely with Michael on several projects at FGCU. His positive approach and readiness to go the extra mile were evident in every task. His dedication to constant improvement and collaborative spirit make him a valuable asset to any team. I highly recommend Michael for any opportunity he pursues.",
       "author_name": "Kaylo Leon",
-      "author_designation": "Starbucks",
+      "author_designation": "FGCU Colleague",
       "linkedin": "https://www.linkedin.com/in/kayloleon/",
       "aria": "Link to Kaylo's linkedin"
     },
@@ -45,7 +45,7 @@
       "src": "src/assets/govinda.png",
       "description": "I worked with Michael on our senior project at FGCU. He was great to work with and was always enthusiastic for opportunities to learn. Even now, he is constantly growing, self-driven and open-minded.",
       "author_name": "Govinda Ramrattan",
-      "author_designation": "Louis Vuitton",
+      "author_designation": "FGCU Colleague",
       "linkedin": "https://www.linkedin.com/in/kayloleon/",
       "aria": "Link to Govinda's linkedin"
     },
@@ -53,11 +53,11 @@
       "id": "3",
       "count": "5",
       "src": "src/assets/ben.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
-      "author_name": "Kathryn Murphy",
-      "author_designation": "McDonalds",
-      "linkedin": "https://www.linkedin.com/in/kayloleon/",
-      "aria": "Link to Govinda's linkedin"
+      "description": "Having worked closely with Michael at Under Armour, I can confidently attest to his exceptional skills and qualities that will translate seamlessly into a software development and team role. I am confident that Michael will bring these strengths to his new role and excel as a valuable member of any team he is a part of.",
+      "author_name": "Benjamin Furlonger",
+      "author_designation": "Under Armour",
+      "linkedin": "https://www.linkedin.com/in/benjamin-furlonger-4998126b/",
+      "aria": "Link to Benjamin's linkedin"
     }
   ]
 }
