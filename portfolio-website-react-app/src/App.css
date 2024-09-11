@@ -869,6 +869,30 @@ label {
     padding-bottom: 15px;
 }
 
+.hero-btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Controls space between button and icons */
+}
+
+.hero-linkedin img,
+.hero-github img {
+  width: 32px; /* Define the size of the icons */
+  height: 32px;
+  margin: 0; /* Remove any potential default margin */
+}
+
+
+
+.hero-linkedin,
+.hero-github {
+  transform: scale(1.2); /* Adjust scale of icons, can tweak as necessary */
+  margin: 0; /* Remove any default margins */
+}
+
+
 @media only screen and (max-width: 1200px) {
   .btn-outline-primary {
     display: none;

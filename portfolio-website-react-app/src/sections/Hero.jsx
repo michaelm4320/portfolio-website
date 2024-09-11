@@ -2,7 +2,9 @@ import React from 'react';
 import Earth from '../canvas/Earth.jsx';
 import testImg from '../assets/testImgF1.png';
 import circles from '../assets/circles.png';
-import Computer from '../canvas/Computers.jsx'; // Adjust the path as necessary
+import Computer from '../canvas/Computers.jsx';
+import linkedinIcon from '../assets/linkedin_icon-2.svg';
+import githubIcon from '../assets/github-icon-2.svg';
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
@@ -31,9 +33,34 @@ export default function Hero() {
             real-world challenges.
           </p>
         </div>
-        <button className="btn-contact" onClick={scrollToContact} aria-label="Navigate to Contact Me section">
-          Get in Touch
-        </button>
+        <div className="hero-btn-group">
+              {/* Get in Touch Button */}
+              <button className="btn-contact" onClick={scrollToContact} aria-label="Navigate to Contact Me section">
+                Get in Touch
+              </button>
+
+              {/* LinkedIn Icon */}
+              <a
+                href="https://www.linkedin.com/in/michaelamartinez4320/"
+                className="hero-linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn Profile"
+              >
+                <img src={linkedinIcon} alt="LinkedIn" className="icon" />
+              </a>
+
+              {/* GitHub Icon */}
+              <a
+                href="https://github.com/michaelm4320"
+                className="hero-github"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub Profile"
+              >
+                <img src={githubIcon} alt="GitHub" className="icon" />
+              </a>
+            </div>
       </div>
       <div className="hero-section-model" aria-label="Interactive 3D Earth model">
         <Earth />
