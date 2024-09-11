@@ -42,9 +42,17 @@ test.describe('Navbar Component', () => {
       // Verify the Home link is present and contains the correct text
       const homeLink = await page.locator('text=Home');
       const aboutLink = await page.locator('a.navbar-content:text("About Me")');
+      const experienceLink = await page.locator('a.navbar-content:text("Experience")');
+      const portfolioLink = await page.locator('a.navbar-content:text("Portfolio")');
+      const endorsementsLink = await page.locator('a.navbar-content:text("Endorsements")');
+      const contactLink = await page.locator('a.navbar-content:text("Contact")');
 
       expect(await homeLink.isVisible()).toBe(true);
       expect(await aboutLink.isVisible()).toBe(true);
+      expect(await experienceLink.isVisible()).toBe(true);
+      expect(await portfolioLink.isVisible()).toBe(true);
+      expect(await endorsementsLink.isVisible()).toBe(true);
+      expect(await contactLink.isVisible()).toBe(true);
   });
 
   test('has Pause/Resume button', async ({ page }) => {
