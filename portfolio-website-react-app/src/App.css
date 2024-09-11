@@ -752,7 +752,7 @@ flex-wrap: wrap; /* Ensures the text wraps as needed */
 .linkedin-link {
   display: block;
   margin-top: 5px; /* Space between designation and link */
-  color: #0073b1; /* LinkedIn blue color */
+  color: #0999b1; /* LinkedIn blue color */
   text-decoration: none; /* Remove underline */
   font-size: 14px; /* Adjust font size as needed */
 }
@@ -892,6 +892,9 @@ label {
   margin: 0; /* Remove any default margins */
 }
 
+.submit-status {
+    color: white;
+}
 
 @media only screen and (max-width: 1200px) {
   .btn-outline-primary {
