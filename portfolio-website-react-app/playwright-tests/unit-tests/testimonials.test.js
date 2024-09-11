@@ -24,7 +24,7 @@ test.describe('Endorsements Section', () => {
 
     expect(await quoteText.textContent()).toContain("I thoroughly enjoyed working closely with Michael on several projects at FGCU. His positive approach and readiness to go the extra mile were evident in every task. His dedication to constant improvement and collaborative spirit make him a valuable asset to any team. I highly recommend Michael for any opportunity he pursues.");
     expect(await authorName.textContent()).toBe("Kaylo Leon");
-    expect(await authorDesignation.textContent()).toBe("Starbucks");
+    expect(await authorDesignation.textContent()).toBe("FGCU Colleague");
     expect(await linkedinLink.getAttribute('href')).toBe("https://www.linkedin.com/in/kayloleon/");
   });
 
@@ -36,8 +36,8 @@ test.describe('Endorsements Section', () => {
 
     expect(await quoteText.textContent()).toContain("I worked with Michael on our senior project at FGCU. He was great to work with and was always enthusiastic for opportunities to learn. Even now, he is constantly growing, self-driven and open-minded.");
     expect(await authorName.textContent()).toBe("Govinda Ramrattan");
-    expect(await authorDesignation.textContent()).toBe("Louis Vuitton");
-    expect(await linkedinLink.getAttribute('href')).toBe("https://www.linkedin.com/in/kayloleon/");
+    expect(await authorDesignation.textContent()).toBe("FGCU Colleague");
+    expect(await linkedinLink.getAttribute('href')).toBe("https://www.linkedin.com/in/govindaramrattan/");
   });
 
   test('displays the third endorsement details', async ({ page }) => {
@@ -46,10 +46,10 @@ test.describe('Endorsements Section', () => {
     const authorDesignation = await page.locator('.author-designation').nth(2);
     const linkedinLink = await page.locator('.linkedin-link').nth(2);
 
-    expect(await quoteText.textContent()).toContain("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique");
-    expect(await authorName.textContent()).toBe("Kathryn Murphy");
-    expect(await authorDesignation.textContent()).toBe("McDonalds");
-    expect(await linkedinLink.getAttribute('href')).toBe("https://www.linkedin.com/in/kayloleon/");
+    expect(await quoteText.textContent()).toContain("Having worked closely with Michael at Under Armour, I can confidently attest to his exceptional skills and qualities that will translate seamlessly into a software development and team role. I am confident that Michael will bring these strengths to his new role and excel as a valuable member of any team he is a part of.");
+    expect(await authorName.textContent()).toBe("Benjamin Furlonger");
+    expect(await authorDesignation.textContent()).toBe("Under Armour");
+    expect(await linkedinLink.getAttribute('href')).toBe("https://www.linkedin.com/in/benjamin-furlonger-4998126b/");
   });
 
   test('endorsements section has proper layout', async ({ page }) => {
