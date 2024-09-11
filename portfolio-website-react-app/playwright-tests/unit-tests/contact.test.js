@@ -47,4 +47,10 @@ test.describe('Contact Form', () => {
       }
     });
   });
+
+  test('should render Google reCAPTCHA', async ({ page }) => {
+    // Check that the reCAPTCHA iframe is present
+    const recaptchaIframe = await page.locator('iframe[src*="https://www.google.com/recaptcha/"]');
+    await expect(recaptchaIframe).toBeVisible();
+  });
 });
