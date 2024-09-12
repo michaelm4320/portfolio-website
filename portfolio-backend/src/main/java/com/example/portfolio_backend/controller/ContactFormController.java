@@ -73,7 +73,10 @@ public class ContactFormController {
             // Send email with form data and save to database
             emailSenderService.sendSimpleEmail("michaelmartinez.inquiries@gmail.com",
                     submission.getSubject(),
-                    "Message from: " + submission.getName() + "\n\n" + submission.getMessage());
+                    "Message from: " + submission.getName() + "\n\n" +
+                            "Email: " + submission.getEmail() + "\n\n" +
+                            "Subject: " + submission.getSubject() + "\n\n" +
+                            "Message: " + submission.getMessage());
 
             contactFormSubmissionRepository.save(submission);
 
