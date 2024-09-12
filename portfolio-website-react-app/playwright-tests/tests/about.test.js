@@ -1,4 +1,4 @@
-// unit-tests/AboutMe.test.js
+// tests/AboutMe.test.js
 const { test, expect } = require('@playwright/test');
 
 test('about me section has title text', async ({ page }) => {
