@@ -16,6 +16,8 @@ import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.PostConstruct;
 
+// Controller for handling contact form submissions
+// Configured to accept requests from localhost and logs reCAPTCHA secret key
 @RestController
 @RequestMapping("/api/contact")
 @CrossOrigin(origins = "http://localhost:5173")
@@ -42,6 +44,8 @@ public class ContactFormController {
         logger.info("Recaptcha Secret Key: {}", recaptchaSecretKey);
     }
 
+    // Handles POST requests for contact form submissions
+    // Validates reCAPTCHA token, applies rate limiting, sends email, and saves submission to the database
     @PostMapping
     public ResponseEntity<String> handleContactForm(
             @ModelAttribute ContactFormSubmissionEntity submission,
@@ -53,7 +57,7 @@ public class ContactFormController {
         logger.info("Received contact form submission: {}", submission);
         logger.info("Received reCAPTCHA token: {}", recaptchaToken);
 
-        // Rate limiting
+        // Check rate limit for the client
         if (!rateLimiterService.tryAcquire(clientId)) {
             logger.warn("Rate limit exceeded for IP: {}", clientId);
             return ResponseEntity.status(429).body("Too many requests. Please try again later.");
@@ -66,12 +70,11 @@ public class ContactFormController {
         }
 
         try {
-            // Send an email with the form data
+            // Send email with form data and save to database
             emailSenderService.sendSimpleEmail("michaelmartinez.inquiries@gmail.com",
                     submission.getSubject(),
                     "Message from: " + submission.getName() + "\n\n" + submission.getMessage());
 
-            // Save to database
             contactFormSubmissionRepository.save(submission);
 
             logger.info("Form submitted successfully");
@@ -85,13 +88,11 @@ public class ContactFormController {
     private boolean verifyRecaptcha(String recaptchaToken) {
         RestTemplate restTemplate = new RestTemplate();
 
-        // Prepare request parameters
+        // Verify reCAPTCHA token with Google's API
         String url = RECAPTCHA_VERIFY_URL + "?secret=" + recaptchaSecretKey + "&response=" + recaptchaToken;
-
-        // Make the request to the reCAPTCHA verification endpoint
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
 
-        // Parse the JSON response
+        // Parse and return the result of reCAPTCHA verification
         JSONObject jsonObject = new JSONObject(response.getBody());
         boolean success = jsonObject.getBoolean("success");
 

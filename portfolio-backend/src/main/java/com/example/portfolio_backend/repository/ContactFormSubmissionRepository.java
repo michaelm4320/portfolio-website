@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ContactFormSubmissionRepository extends JpaRepository<ContactFormSubmissionEntity, Long> {
+    // Provides methods to perform CRUD operations on ContactFormSubmissionEntity
 }

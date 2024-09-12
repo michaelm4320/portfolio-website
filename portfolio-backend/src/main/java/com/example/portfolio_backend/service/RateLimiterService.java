@@ -11,22 +11,25 @@ import java.util.concurrent.TimeUnit;
 @Service
 public class RateLimiterService {
 
+    // Cache to store rate limiters for different clients, with a 1-minute expiration policy
     private final LoadingCache<String, RateLimiter> rateLimiters = CacheBuilder.newBuilder()
-            .expireAfterAccess(1, TimeUnit.MINUTES)
+            .expireAfterAccess(1, TimeUnit.MINUTES) // Cache expires after 1 minute of inactivity
             .build(new CacheLoader<String, RateLimiter>() {
                 @Override
                 public RateLimiter load(String key) {
-                    return RateLimiter.create(2.0 / 60.0); // 2 requests per minute or (24.0 * 60.0 * 60.0)); // per day
+                    // Create a RateLimiter that allows 2 requests per minute
+                    return RateLimiter.create(2.0 / 60.0); // Allows 2 requests per minute (adjust as needed)
                 }
             });
 
+    // Attempt to acquire a permit for the given client ID
     public boolean tryAcquire(String clientId) {
         try {
-            RateLimiter rateLimiter = rateLimiters.get(clientId);
-            return rateLimiter.tryAcquire();
+            RateLimiter rateLimiter = rateLimiters.get(clientId); // Retrieve or create a RateLimiter for the client
+            return rateLimiter.tryAcquire(); // Attempt to acquire a permit
         } catch (Exception e) {
-            // Log the exception
-            return false;
+            // Handle exceptions (e.g., logging)
+            return false; // Return false if acquisition fails
         }
     }
 }
