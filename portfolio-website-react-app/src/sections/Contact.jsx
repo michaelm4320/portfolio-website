@@ -72,7 +72,7 @@ const Contact = () => {
     updateRecaptchaSize(); // Call on component mount to set initial size
     window.addEventListener('resize', updateRecaptchaSize); // Add listener for resizing
 
-    return () => window.removeEventListener('resize', updateRecaptchaSize); // Cleanup on unmount
+    return () => window.removeEventListener('resize', updateRecaptchaSize); // Clean up listener on unmount
   }, []);
 
   return (

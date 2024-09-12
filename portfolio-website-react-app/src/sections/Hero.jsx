@@ -8,6 +8,7 @@ import githubIcon from '../assets/github-icon-2.svg';
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
+// Smoothly scroll to the contact section when called
 export default function Hero() {
   const scrollToContact = () => {
     const contactSection = document.getElementById('MyContact');

@@ -5,14 +5,17 @@ import logo from '../assets/M-iconPortfolio.png';
 function Navbar() {
   const [navActive, setNavActive] = useState(false);
 
+  // Toggle the navigation menu visibility
   const toggleNav = () => {
     setNavActive(!navActive);
   };
 
+  // Close the navigation menu
   const closeMenu = () => {
     setNavActive(false);
   };
 
+  // Handle keydown events to trigger actions with Enter or Space
   const handleKeyDown = (event, action) => {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault(); // Prevent default spacebar scroll
@@ -20,6 +23,7 @@ function Navbar() {
       }
   };
 
+  // Close the menu on window resize if width is 500px or less
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 500) {
@@ -34,6 +38,7 @@ function Navbar() {
     };
   }, []);
 
+  // Close the menu on initial render if width is 1200px or less
   useEffect(() => {
     if (window.innerWidth <= 1200) {
       closeMenu;
