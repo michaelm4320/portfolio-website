@@ -16,20 +16,32 @@ responsive single-page application.
 - **Interactive 3D Effects:** Engaging starry background and 3D Earth model using Three.js.
 - **Contact Form:** Reach out to me directly via the contact form.
 - **Accessibility:** Compliant with WCAG Level A standards.
+- **Automated Testing:** Front-end tested using Playwright for reliable performance and functionality.
+- **Database Integration:** MySQL database saves all submissions from the contact form.
+- **Deployment:** To be hosted on AWS Lightsail with security implementations to safeguard data and ensure robust access
+  control.
 
-### Sections
+## Sections
 
-* Home
-* About Me
-* Experience
-* Portfolio
-* Endorsements
-* Contact Me
+* **Navbar**
+    - Contains logo and website navigation.
+* **Hero**
+    - Short introduction with interactive Earth model.
+* **About Me**
+    - Background information of myself.
+* **Experience**
+    - Professional experience and tech stack.
+* **Portfolio**
+    - List of projects I've worked and saved on my github.
+* **Endorsements**
+    - Recommendations from colleagues.
+* **Contact Me**
+    - Contact form to submit information to my email and database.
 
 ## Tech Stack
 
 - **Frontend:** React, Vite, Three.js, HTML, CSS, JavaScript
-- **Backend (planned):** Spring Boot, MySQL
+- **Backend:** Spring Boot, MySQL
 - **Deployment:** (To be determined)
 
 ## Installation & Setup
@@ -68,11 +80,11 @@ The `package.json` file is a crucial part of any Node.js project. It contains me
 including its dependencies, scripts, and configuration. In this project, `package.json` has been configured to
 handle various tasks related to development and testing.
 
-### Spring Boot
+## Spring Boot
 
 To run Spring Boot, run `mvn.cmd spring-boot:run` on the terminal in root.
 
-### Scripts
+## Scripts
 
 The `scripts` section in `package.json` allows you to define commands that can be run from the terminal.
 Here's an overview of the scripts set up for this project:
@@ -81,17 +93,13 @@ Here's an overview of the scripts set up for this project:
   application locally.
 - **`test`**: Runs Playwright unit tests. Use `npm run test`.
 
-### Playwright
+## Playwright
 
 **Playwright** is used for unit and end-to-end (e2e) testing.
 
-- **Configuration**:
-    - Configuration for Playwright is defined in `playwright.config.cjs`.
-    - The `baseURL` is set to `http://localhost:5173/`, which is the local development server URL.
-    - Tests are located in the `playwright-tests` directory.
+**Running Tests**
 
-- **Running Tests**:
-    - `npm run test`
+- **`npm run test`**
 
 # Tutorials
 
