@@ -18,7 +18,7 @@ public class RateLimiterService {
                 @Override
                 public RateLimiter load(String key) {
                     // Create a RateLimiter that allows 2 requests per minute
-                    return RateLimiter.create(2.0 / 60.0); // 2 requests per minute or (24.0 * 60.0 * 60.0))
+                    return RateLimiter.create(2.0 / (60.0 * 60.0)); // 2 requests every hour or (24.0 * 60.0 * 60.0))
                 }
             });
 
