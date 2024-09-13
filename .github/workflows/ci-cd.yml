@@ -60,14 +60,10 @@ jobs:
       - name: Wait for frontend server to be ready
         run: npx wait-on http://localhost:5173
 
-      - name: Run Vitest unit tests
-        working-directory: portfolio-website-react-app
-        run: npm run test:unit
-
       - name: Install Playwright Browsers
         working-directory: portfolio-website-react-app
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
         working-directory: portfolio-website-react-app
-        run: npm run test:e2e
+        run: npm run test

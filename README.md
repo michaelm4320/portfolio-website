@@ -6,7 +6,7 @@ A personal portfolio website showcasing different sections about myself, my expe
 and a contact form with stunning 3D visuals. Built using modern web technologies to create a professional and
 responsive single-page application.
 
-![img.png](img.png)
+![img_3.png](img_3.png)
 
 ![img_2.png](img_2.png)
 

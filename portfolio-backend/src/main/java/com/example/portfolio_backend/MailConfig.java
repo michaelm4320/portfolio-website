@@ -18,7 +18,6 @@ public class MailConfig {
         mailSender.setHost("smtp.gmail.com"); // Set the SMTP server host
         mailSender.setPort(587); // Set the SMTP server port (TLS/STARTTLS)
 
-        // Set username and password for authentication from environment variables
         mailSender.setUsername(System.getenv("MAIL_USERNAME"));
         mailSender.setPassword(System.getenv("MAIL_PASSWORD"));
 
