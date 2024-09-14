@@ -95,7 +95,7 @@ Here's an overview of the scripts set up for this project:
 
 ## Playwright
 
-**Playwright** is used for unit and end-to-end (e2e) testing.
+**Playwright** is used for end-to-end (e2e) testing.
 
 **Running Tests**
 
