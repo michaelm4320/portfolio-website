@@ -41,7 +41,7 @@ const Contact = () => {
       });
       formDataToSend.append('recaptchaToken', recaptchaToken);
 
-      const response = await fetch('http://localhost:8080/api/contact', {
+      const response = await fetch('https://michaelmartinez.dev/api/contact', { //'http://localhost:8080/api/contact'
         method: 'POST',
         body: formDataToSend,
       });
