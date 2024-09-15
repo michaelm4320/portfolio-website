@@ -20,7 +20,7 @@ import javax.annotation.PostConstruct;
 // Configured to accept requests from localhost and logs reCAPTCHA secret key
 @RestController
 @RequestMapping("/api/contact")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {"http://localhost:5173", "https://michaelmartinez.dev"})
 public class ContactFormController {
 
     private static final Logger logger = LoggerFactory.getLogger(ContactFormController.class);
