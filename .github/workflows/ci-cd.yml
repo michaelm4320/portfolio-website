@@ -45,7 +45,12 @@ jobs:
 
       - name: Deploy backend to AWS Lightsail
         run: |
-          # Copy the JAR file to the AWS Lightsail instance
+          # Remove the old JAR file if it exists
+          ssh -i LightsailDefaultKey-us-east-1.pem ubuntu@3.87.57.137 << 'EOF'
+            rm -f /home/ubuntu/portfolio-website-0.0.1-SNAPSHOT.jar
+          EOF
+
+          # Copy the new JAR file to the AWS Lightsail instance
           scp -i LightsailDefaultKey-us-east-1.pem "target/portfolio-website-0.0.1-SNAPSHOT.jar" ubuntu@3.87.57.137:/home/ubuntu/
 
           # Connect to the AWS Lightsail instance and manage the backend
@@ -56,6 +61,7 @@ jobs:
             # Start the new JAR in the background
             nohup java -jar /home/ubuntu/portfolio-website-0.0.1-SNAPSHOT.jar > /home/ubuntu/portfolio-website.log 2>&1 &
           EOF
+  
 
   frontend-build:
     runs-on: ubuntu-latest
