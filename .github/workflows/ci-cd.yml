@@ -35,6 +35,10 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.AWS_SSH_PRIVATE_KEY }}
         run: |
+          # Create a temporary PEM file
+          echo "${SSH_PRIVATE_KEY}" > LightsailDefaultKey-us-east-1.pem
+          chmod 600 LightsailDefaultKey-us-east-1.pem
+
           # Copy the JAR file to the AWS Lightsail instance
           scp -i LightsailDefaultKey-us-east-1.pem "target/portfolio-website-0.0.1-SNAPSHOT.jar" ubuntu@3.87.57.137:/home/ubuntu/
 
@@ -70,8 +74,6 @@ jobs:
       - name: Start frontend server
         working-directory: portfolio-website-react-app
         run: npm run dev &
-        env:
-          NODE_ENV: test
 
       - name: Wait for frontend server to be ready
         run: npx wait-on http://localhost:5173
