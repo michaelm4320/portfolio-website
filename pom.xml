@@ -108,6 +108,13 @@
                 <configuration>
                     <mainClass>com.example.portfolio_backend.PortfolioBackendApplication</mainClass>
                 </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

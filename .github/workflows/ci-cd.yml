@@ -29,7 +29,10 @@ jobs:
 
       - name: Build backend
         run: |
-          mvn clean package spring-boot:repackage -Dmaven.test.skip=true
+          mvn clean package spring-boot:repackage -X
+
+      - name: Inspect JAR contents
+        run: jar tf target/portfolio-website-0.0.1-SNAPSHOT.jar
 
       - name: Create SSH private key file
         env:
