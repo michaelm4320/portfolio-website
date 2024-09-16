@@ -31,14 +31,20 @@ jobs:
         run: |
           mvn clean install
 
-      - name: Deploy backend to AWS Lightsail
+      - name: Create SSH private key file
         env:
           SSH_PRIVATE_KEY: ${{ secrets.AWS_SSH_PRIVATE_KEY }}
         run: |
-          # Create a temporary PEM file
           echo "${SSH_PRIVATE_KEY}" > LightsailDefaultKey-us-east-1.pem
           chmod 600 LightsailDefaultKey-us-east-1.pem
 
+      - name: Add AWS Lightsail host key to known hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H 3.87.57.137 >> ~/.ssh/known_hosts
+
+      - name: Deploy backend to AWS Lightsail
+        run: |
           # Copy the JAR file to the AWS Lightsail instance
           scp -i LightsailDefaultKey-us-east-1.pem "target/portfolio-website-0.0.1-SNAPSHOT.jar" ubuntu@3.87.57.137:/home/ubuntu/
 
