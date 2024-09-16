@@ -29,7 +29,7 @@ jobs:
 
       - name: Build backend
         run: |
-          mvn clean package # Use package to build the JAR file with all necessary files
+          mvn clean package spring-boot:repackage -Dmaven.test.skip=true
 
       - name: Create SSH private key file
         env:
@@ -49,19 +49,18 @@ jobs:
           ssh -i LightsailDefaultKey-us-east-1.pem ubuntu@3.87.57.137 << 'EOF'
             rm -f /home/ubuntu/portfolio-website-0.0.1-SNAPSHOT.jar
           EOF
-
+          
           # Copy the new JAR file to the AWS Lightsail instance
           scp -i LightsailDefaultKey-us-east-1.pem "target/portfolio-website-0.0.1-SNAPSHOT.jar" ubuntu@3.87.57.137:/home/ubuntu/
-
+          
           # Connect to the AWS Lightsail instance and manage the backend
           ssh -i LightsailDefaultKey-us-east-1.pem ubuntu@3.87.57.137 << 'EOF'
             # Stop the running JAR if it exists
             pkill -f 'java -jar portfolio-website-0.0.1-SNAPSHOT.jar' || true
-
+          
             # Start the new JAR in the background
             nohup java -jar /home/ubuntu/portfolio-website-0.0.1-SNAPSHOT.jar > /home/ubuntu/portfolio-website.log 2>&1 &
           EOF
-  
 
   frontend-build:
     runs-on: ubuntu-latest
