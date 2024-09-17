@@ -42,7 +42,7 @@ responsive single-page application.
 
 - **Frontend:** React, Vite, Three.js, HTML, CSS, JavaScript
 - **Backend:** Spring Boot, MySQL
-- **Deployment:** (To be determined)
+- **Deployment:** AWS Lightsail, Netlify
 
 ## Installation & Setup
 
@@ -55,24 +55,61 @@ Clone the repository and install dependencies:
 
 ## CI/CD Pipeline
 
-1. **Backend Build and Test**
-    - **Environment**: `ubuntu-latest`
-    - **Steps**:
-        - **Checkout Code**: Uses the `actions/checkout@v2` action to checkout the code.
-        - **Set up JDK 21**: Uses the `actions/setup-java@v4` action to set up Java Development Kit version 21.
-        - **Set up Maven**: Uses the `stCarolas/setup-maven@v5` action to set up Maven version 3.8.2.
-        - **Build and Test Backend**: Runs the `mvn clean install` command to build and test the backend.
+This CI/CD pipeline automates the process of building and deploying your project. Here's a simple breakdown of what each
+part does:
 
-2. **Frontend Build and Test**
-    - **Environment**: `ubuntu-latest`
-    - **Steps**:
-        - **Checkout Code**: Uses the `actions/checkout@v2` action to checkout the code.
-        - **Set up Node.js**: Uses the `actions/setup-node@v2` action to set up Node.js version 16.
-        - **Install Dependencies and Build Frontend**: Runs the `npm install` and `npm run build` commands in
-          the `portfolio-website-react-app` directory.
-        - **Start Development Server**: Starts the Vite development server and runs it in the background.
-        - **Run End-to-End Tests with Playwright**: Runs the `npm run test:e2e` command to execute end-to-end tests
-          using Playwright.
+### Backend Build
+
+1. **Checkout Code**
+    - Fetches the latest code from your GitHub repository.
+
+2. **Set up JDK 17**
+    - Installs Java Development Kit (JDK) version 17.
+
+3. **Set up Maven**
+    - Installs Maven, a build tool for Java projects.
+
+4. **Build Backend**
+    - Compiles and packages your backend code into a JAR file, skipping tests for faster builds.
+
+5. **Inspect JAR Contents**
+    - Lists the contents of the generated JAR file to ensure it's correct.
+
+6. **Create SSH Private Key File**
+    - Creates a file from the SSH private key stored in GitHub secrets for secure access to the deployment server.
+
+7. **Add AWS Lightsail Host Key**
+    - Adds the deployment server’s SSH key to known hosts to prevent SSH warnings during deployment.
+
+8. **Deploy Backend to AWS Lightsail**
+    - Removes the old JAR file from the server, copies the new JAR file to the server, and restarts the backend service
+      with the new JAR.
+
+### Frontend Build
+
+1. **Checkout Code**
+    - Fetches the latest code from your GitHub repository.
+
+2. **Set up Node.js**
+    - Installs Node.js version 16, needed for building the frontend.
+
+3. **Install Dependencies**
+    - Installs JavaScript libraries required for your frontend.
+
+4. **Build Frontend**
+    - Compiles and builds the frontend code into static files.
+
+5. **Start Frontend Server**
+    - Starts the frontend development server to serve your static files.
+
+6. **Wait for Frontend Server to be Ready**
+    - Waits until the frontend server is up and running.
+
+7. **Install Playwright Browsers**
+    - Installs the necessary browsers for Playwright testing.
+
+8. **Run Playwright Tests**
+    - Executes automated tests using Playwright to ensure the frontend works correctly.
 
 ## `package.json` Overview
 
