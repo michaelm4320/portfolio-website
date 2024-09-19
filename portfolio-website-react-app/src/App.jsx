@@ -18,6 +18,14 @@ function App() {
     document.title = "Michael's Portfolio Website";
   }, []);
 
+  useEffect(() => {
+    fetch('https://api.michaelmartinez.dev/', {
+      method: 'GET'
+    })
+      .then(response => response.text()) // Handles the response if needed
+      .catch(error => console.error('Error:', error));
+  }, []);
+
   return (
     <>
         <Navbar />

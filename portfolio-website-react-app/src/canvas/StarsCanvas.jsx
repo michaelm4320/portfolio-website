@@ -63,7 +63,7 @@ const StarsCanvas = () => {
         height: '100vh',
         zIndex: -1, // Ensure the background stays behind all other content.
         pointerEvents: 'none', // Prevent interaction with the background (e.g., clicks).
-        background: 'linear-gradient(135deg, rgb(10, 0, 0), rgb(0, 0, 30))' // Dark gradient background.
+        background: 'linear-gradient(135deg, rgb(0, 0, 0), rgb(0, 0, 30))' // Dark gradient background.
       }}
     >
       {/* Canvas for rendering 3D content with a camera positioned at [0, 0, 1] */}
