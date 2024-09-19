@@ -1,3 +1,4 @@
+.github\workflows\ci-cd.yml
 .env
 portfolio-backend/src/main/resources/application.properties
 target/

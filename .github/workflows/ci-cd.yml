@@ -44,20 +44,20 @@ jobs:
       - name: Add AWS Lightsail host key to known hosts
         run: |
           mkdir -p ~/.ssh
-          ssh-keyscan -H 3.87.57.137 >> ~/.ssh/known_hosts
+          ssh-keyscan -H api.michaelmartinez.dev >> ~/.ssh/known_hosts
 
       - name: Deploy backend to AWS Lightsail
         run: |
           # Remove the old JAR file if it exists
-          ssh -i LightsailDefaultKey-us-east-1.pem ubuntu@3.87.57.137 << 'EOF'
+          ssh -i LightsailDefaultKey-us-east-1.pem ubuntu@api.michaelmartinez.dev << 'EOF'
             rm -f /home/ubuntu/portfolio-website-0.0.1-SNAPSHOT.jar
           EOF
-          
+
           # Copy the new JAR file to the AWS Lightsail instance
-          scp -i LightsailDefaultKey-us-east-1.pem "target/portfolio-website-0.0.1-SNAPSHOT.jar" ubuntu@3.87.57.137:/home/ubuntu/
+          scp -i LightsailDefaultKey-us-east-1.pem "target/portfolio-website-0.0.1-SNAPSHOT.jar" ubuntu@api.michaelmartinez.dev:/home/ubuntu/
           
           # Connect to the AWS Lightsail instance and manage the backend
-          ssh -i LightsailDefaultKey-us-east-1.pem ubuntu@3.87.57.137 << 'EOF'
+          ssh -i LightsailDefaultKey-us-east-1.pem ubuntu@api.michaelmartinez.dev << 'EOF'
             # Stop the running JAR if it exists
             pkill -f 'java -jar portfolio-website-0.0.1-SNAPSHOT.jar' || true
           
